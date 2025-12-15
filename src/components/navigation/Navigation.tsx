@@ -7,23 +7,23 @@ import {
 export const Navigation = () => {
 
     return (
-      <nav className="w-full flex items-center justify-between py-4 bg-[#dad0dc]">
+      <div className="w-full text-lg font-montserrat items-center justify-between py-4 bg-[#dad0dc]">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+              <NavigationMenuLink href="#home" className="ml-2 text-lg uppercase">Home</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#projects">Projects</NavigationMenuLink>
+              <NavigationMenuLink href="#projects" className="text-lg uppercase">Projects</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#experiences">Experiences</NavigationMenuLink>
+              <NavigationMenuLink href="#experiences" className="text-lg uppercase ">Experiences</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#contact">Contact</NavigationMenuLink>
+              <NavigationMenuLink href="#contact" className="text-lg uppercase">Contact</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-      </nav>
+      </div>
     )
 }
