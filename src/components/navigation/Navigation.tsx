@@ -7,7 +7,7 @@ import {
 export const Navigation = () => {
 
     return (
-      <nav className="w-full flex items-center justify-between py-3">
+      <nav className="w-full flex items-center justify-between py-4 bg-[#dad0dc]">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

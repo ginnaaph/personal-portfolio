@@ -5,6 +5,7 @@ export const HomePg = () => {
         <div>
             <Navigation />
             <Hero />
+            
         
         </div>
     )
