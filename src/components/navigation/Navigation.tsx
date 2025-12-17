@@ -14,7 +14,7 @@ export const Navigation = () => {
               <NavigationMenuLink href="#home" className="ml-2 text-lg uppercase">Home</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#projects" className="text-lg uppercase">Explorations</NavigationMenuLink>
+              <NavigationMenuLink href="#explorations" className="text-lg uppercase">Explorations</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href="#experiences" className="text-lg uppercase ">Experiences</NavigationMenuLink>

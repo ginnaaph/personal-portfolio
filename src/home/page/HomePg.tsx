@@ -5,7 +5,7 @@ import { Footer } from "../Footer"
 import { LatestCreations } from "../overview/LatestCreation.tsx"
 export const HomePg = () => {
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div id="home" className="flex flex-col items-center justify-center">
             <Navigation />
             <Hero />
             <AboutMe />
