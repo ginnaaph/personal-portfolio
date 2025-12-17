@@ -4,20 +4,23 @@ import {
   NavigationMenuList,
   NavigationMenuLink,
 } from "../ui/navigation-menu"
+import { useNavigate } from "react-router-dom"
+
 export const Navigation = () => {
+  const navigate = useNavigate();
 
     return (
       <div className="w-full text-lg  text-white font-montserrat items-center justify-between py-4 bg-[#7e738e]">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#home" className="ml-2 text-lg uppercase">Home</NavigationMenuLink>
+              <NavigationMenuLink href="#home" className="ml-2 text-lg uppercase" onClick={() => navigate("/")}> Home</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#explorations" className="text-lg uppercase">Explorations</NavigationMenuLink>
+              <NavigationMenuLink href="#explorations" className="text-lg uppercase" onClick={() => navigate("/explorations")}>Explorations</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#experiences" className="text-lg uppercase ">Experiences</NavigationMenuLink>
+              <NavigationMenuLink href="#experiences" className="text-lg uppercase " onClick={() => navigate("/experiences")}>Experiences</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href="#contact" className="text-lg uppercase">Contact</NavigationMenuLink>
