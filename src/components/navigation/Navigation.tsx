@@ -23,7 +23,7 @@ export const Navigation = () => {
               <NavigationMenuLink href="#experiences" className="text-lg uppercase " onClick={() => navigate("/experiences")}>Experiences</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#contact" className="text-lg uppercase">Contact</NavigationMenuLink>
+              <NavigationMenuLink href="#contact" className="text-lg uppercase" onClick={() => navigate("/contact")}>Contact</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

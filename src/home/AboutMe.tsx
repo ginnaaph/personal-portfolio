@@ -1,4 +1,5 @@
 import AboutMeImage from '../assets/images/computer.png'
+import { AlbertEinsteinQuote } from './Quotes'
 export const AboutMe = () => { 
     return (
         <div className="flex p-20 mt-10 bg-[#DAD0DC] rounded-lg">
@@ -12,6 +13,9 @@ export const AboutMe = () => {
             systems, people, and ideas connect. Whether it's refining a process, designing a solution, or experimenting with 
             something new, I'm always askings "How does this work?" and "How can we make it better?" Here, you'll find the Projects
             I've created along the way, each one is a small chapter in my journey of learning, building, and growing through curiousity.
+        </div>
+        <div>
+        <AlbertEinsteinQuote />
         </div>
     </div>
        
