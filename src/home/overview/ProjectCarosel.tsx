@@ -33,11 +33,11 @@ const projects = [
         <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm md:text-base font-sans max-w-3xl mx-auto">
           A playful cat adoption app built with React + Tailwind. Features search, favorites, and shareable profiles.
         </p>
-        <ul className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
-          <li>Stack: React, Vite, TypeScript TailwindCSS</li>
-          <li>Focus: delightful micro-interactions</li>
-          <li>Outcome: faster browsin,g and better match discovery</li>
-        </ul>
+        <div className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
+          <p>Stack: React, Vite, TypeScript TailwindCSS</p>
+          <p>Focus: delightful micro-interactions</p>
+          <p>Outcome: faster browsin,g and better match discovery</p>
+        </div>
       </div>
     ),
   },
@@ -51,10 +51,10 @@ const projects = [
         <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm md:text-base font-sans max-w-3xl mx-auto">
           watercolor painting of a tradtional jaoanese storefront. 
         </p>
-        <ul className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
-          <li>Medium: Watercolor + Ink </li>
-          <li>Outcome: cohesive festive set with print-ready assets</li>
-        </ul>
+        <div className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
+          <p>Medium: Watercolor + Ink </p>
+          <p>Outcome: cohesive festive set with print-ready assets</p>
+        </div>
       </div>
     ),
   },
@@ -67,10 +67,10 @@ const projects = [
         <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm md:text-base font-sans max-w-3xl mx-auto">
          my go to recipe for a brown butter white chocolate chip cookie.
         </p>
-        <ul className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
-          <li>Ingredients: butter, sugar, eggs, vanilla, flour, baking soda, salt, white chocolate chips</li>
+        <div className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
+          <p>Ingredients: butter, sugar, eggs, vanilla, flour, baking soda, salt, white chocolate chips</p>
         
-        </ul>
+        </div>
       </div>
     ),
   },
