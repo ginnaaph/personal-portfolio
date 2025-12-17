@@ -1,5 +1,5 @@
 import { ProjectCarousel } from "./ProjectCarosel"
-export const LatestsProjects = () => {
+export const LatestCreations = () => {
     return (
         <div>
             <ProjectCarousel />
