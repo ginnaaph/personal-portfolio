@@ -6,7 +6,7 @@ export const AboutMe = () => {
              <img src={AboutMeImage} className="w-70 h-70 mt-20" alt="aboutMeImage" />
 
     <div className="flex flex-col align-items-center w-5/6 p-20 justify-content-center "> 
-        <div  className="font-['Noticia_Text'] text-4xl"> A litte about the <span className="text-[#7e738E] italic font-['Noticia_Text']">curious mind</span> behind the page... </div>
+        <div  className="text-4xl"> A litte about me, <span className="text-[#7e738E] text-3xl italic font-['Noticia_Text']">curious mind behind the page... </span></div>
         <div className="flex justify-center mt-2">Welcome! I'm Gina, a lifelong learner, self-starter, and creative builder with a deep love for figuring 
             things out. This portfolio is more than a collection of work, it's a reflection of who I am. Curiousity is the 
             heart of my personal brand. It is what led to me teach myself how to code, to draw and paint, and to explore how 
