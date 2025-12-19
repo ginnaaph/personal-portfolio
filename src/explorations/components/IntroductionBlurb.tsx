@@ -1,7 +1,7 @@
 import { ExplorationRotatingText } from "@/components/RotatingText";
 
 export const IntroductionBlurb = () => {
-    const text = ['build.', 'paint.', 'draw.', 'code.', 'create.', 'innovate', 'explore.'];
+    const text = ['build.', 'paint.', 'draw.', 'code.', 'create.', 'innovate.', 'explore.'];
     return (
 <>
 
