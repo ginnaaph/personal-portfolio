@@ -3,7 +3,6 @@ import React, {
   useEffect,
   useRef,
   useState,
-  createContext,
   useContext,
 } from "react";
 import {
@@ -14,26 +13,19 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-
+import { CarouselContext } from "./carousel-context";
 interface CarouselProps {
-  items: JSX.Element[];
+  items: React.ReactNode[]; // Changed from JSX.Element[] for better compatibility
   initialScroll?: number;
 }
 
-type Card = {
+type CardType = {
   src: string;
   title: string;
   category: string;
   content: React.ReactNode;
 };
 
-export const CarouselContext = createContext<{
-  onCardClose: (index: number) => void;
-  currentIndex: number;
-}>({
-  onCardClose: () => {},
-  currentIndex: 0,
-});
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
@@ -58,34 +50,27 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      // Step by one card (17.5rem) plus the gap (1rem) ≈ 296px
-      carouselRef.current.scrollBy({ left: -296, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      // Step by one card (17.5rem) plus the gap (1rem) ≈ 296px
-      carouselRef.current.scrollBy({ left: 296, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
     }
   };
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
-      // Match card size (17.5rem = 280px) and container gap-4 (1rem = 16px)
       const cardWidth = 280;
       const gap = 16;
-      const scrollPosition = (cardWidth + gap) * (index + 1);
+      const scrollPosition = (cardWidth + gap) * index;
       carouselRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
       });
       setCurrentIndex(index);
     }
-  };
-
-  const isMobile = () => {
-    return window && window.innerWidth < 768;
   };
 
   return (
@@ -98,36 +83,19 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           ref={carouselRef}
           onScroll={checkScrollability}
         >
-          <div
-            className={cn(
-              "absolute right-0 z-1000 h-auto w-[5%] overflow-hidden bg-linear-to-l",
-            )}
-          ></div>
-
-          <div
-            className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "mx-auto ", // remove max-w-4xl if you want the carousel to span the full width of its container
-            )}
-          >
+          {/* Main Container: Removed mx-auto to allow full width */}
+          <div className="flex flex-row justify-start gap-4 pl-4 w-full">
             {items.map((item, index) => (
               <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 * index,
+                  ease: "easeOut",
                 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    delay: 0.2 * index,
-                    ease: "easeOut",
-                    once: true,
-                  },
-                }}
-                key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                key={"card-container-" + index}
+                className="rounded-3xl last:pr-[5%] md:last:pr-[10%]" // Adjusted pr for better full-width feel
               >
                 {item}
               </motion.div>
@@ -160,36 +128,27 @@ export const Card = ({
   index,
   layout = false,
 }: {
-  card: Card;
+  card: CardType;
   index: number;
   layout?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        handleClose();
-      }
+      if (event.key === "Escape") handleClose();
     }
-
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    document.body.style.overflow = open ? "hidden" : "auto";
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  useOutsideClick(containerRef, () => handleClose());
+  // Fixed Type: passing the ref as the correct expected type for the hook
+  useOutsideClick(containerRef as React.RefObject<HTMLDivElement>, () => handleClose());
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const handleOpen = () => setOpen(true);
 
   const handleClose = () => {
     setOpen(false);
@@ -213,7 +172,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-60 mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
             >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
@@ -221,16 +180,10 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-[#775d68] dark:text-[#DAD0DC]"
-              >
+              <motion.p className="text-base font-medium text-[#775d68] dark:text-[#DAD0DC]">
                 {card.category}
               </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-2 text-2xl font-semibold text-[#775d68] md:text-5xl dark:text-[#DAD0DC]"
-              >
+              <motion.p className="mt-2 text-2xl font-semibold text-[#775d68] md:text-5xl dark:text-[#DAD0DC]">
                 {card.title}
               </motion.p>
               <div className="py-7">{card.content}</div>
@@ -238,25 +191,20 @@ export const Card = ({
           </div>
         )}
       </AnimatePresence>
+      
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
         className="relative z-10 flex h-80 w-70 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-70 md:w-70 dark:bg-neutral-900"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-bg-[#775d68]/50 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-[#775d68]/50 via-transparent to-transparent" />
         <div className="relative z-40 p-4">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left  text-sm font-medium text-[#7e738e] md:text-base"
-          >
+          <p className="text-left text-sm font-medium text-[#7e738e] md:text-base">
             {card.category}
-          </motion.p>
-          <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="max-w-xs text-left font-semibold text-balance text-[#7e738e] md:text-3xl"
-          >
+          </p>
+          <p className="max-w-xs text-left font-semibold text-balance text-[#7e738e] md:text-3xl">
             {card.title}
-          </motion.p>
+          </p>
         </div>
         <BlurImage
           src={card.src}
@@ -268,34 +216,25 @@ export const Card = ({
   );
 };
 
-type BlurImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
-  src: string;
-};
-
+// Removed Next.js specific props to satisfy Vite/standard HTML Image types
 export const BlurImage = ({
-  height,
-  width,
   src,
   className,
   alt,
   ...rest
-}: BlurImageProps) => {
+}: { src: string; className?: string; alt?: string }) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <img
       className={cn(
-        "h-full w-full transition duration-300 blur-[3px]",
+        "h-full w-full transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
-        className,
+        className
       )}
       onLoad={() => setLoading(false)}
-      src={src as string}
-      width={width}
-      height={height}
+      src={src}
       loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Background of a beautiful view"}
+      alt={alt || "Background Image"}
       {...rest}
     />
   );
