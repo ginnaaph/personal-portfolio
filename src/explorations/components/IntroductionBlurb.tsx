@@ -5,7 +5,7 @@ export const IntroductionBlurb = () => {
     return (
 <>
 
-    <div className="text-4xl font-montserrat leading-relaxed max-w-4xl mx-auto mt-10 text-center px-4 flex">Come <span>
+    <div className="text-4xl font-montserrat leading-relaxed max-w-5xl mt-5 text-left px-4 flex justify-start">Come <span>
     <ExplorationRotatingText
         delay={0}
         y={10}
@@ -13,9 +13,9 @@ export const IntroductionBlurb = () => {
         text={text}
     /></span>
     </div>
-    <div className="px-4 text-center">
+    <div className="px-4 text-left">
         
-    with me on a journey of creativity and discovery as we explore new ideas and push the boundaries of innovation together.
+    with me on a journey of creativity, learning, and exploration.
     </div>
     
 

@@ -72,14 +72,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
-      <div className="relative w-full">
+      <div className="relative p-2 px-9 w-screen flex items-center">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
+          className="flex flex-col w-full items-center overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] md:py-20"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
           {/* Main Container: Removed mx-auto to allow full width */}
-          <div className="flex flex-row justify-start gap-4 pl-4 w-full">
+          <div className="flex flex-row justify-start items-center gap-4 pl-8">
             {items.map((item, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -90,14 +90,15 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   ease: "easeOut",
                 }}
                 key={"card-container-" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[10%]" // Adjusted pr for better full-width feel
+                className="justify-content-center last:pr-[5%] md:last:pr-[10%]" // Adjusted pr for better full-width feel
               >
                 {item}
               </motion.div>
             ))}
-          </div>
+          
         </div>
-        <div className="mr-10 flex justify-end gap-2">
+        <div className="flex mt-6">
+        <div className="mr-10 flex  justify-end gap-2">
           <button
             className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#DAD0DC] disabled:opacity-50"
             onClick={scrollLeft}
@@ -113,6 +114,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             <IconArrowNarrowRight className="h-6 w-6 text-[#775d68]" />
           </button>
         </div>
+        </div>
+      </div>
       </div>
     </CarouselContext.Provider>
   );
@@ -192,28 +195,30 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-70 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-70 md:w-70 dark:bg-neutral-900"
+        className="group relative z-10 flex h-80 w-70 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-70 md:w-70 dark:bg-neutral-900"
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-[#775d68]/50 via-transparent to-transparent" />
         <div className="relative z-40 p-4">
-          <p className="text-left text-sm font-medium text-[#7e738e] md:text-base">
-            {card.category}
-          </p>
-          <p className="max-w-xs text-left font-semibold text-balance text-[#7e738e] md:text-3xl">
+         
+          <p className="text-left font-semibold text-balance text-[#7e738e] md:text-3xl bg-[#dad0dc]/70 mt-2 px-2 py-1 rounded-md">
             {card.title}
           </p>
+           <p className="text-left flex justify-start text-sm mt-1 font-medium text-[#7e738e] md:text-base bg-[#dad0dc]/60  px-2 py-1 rounded-md">
+            {card.category}
+          </p>
         </div>
+        
         <BlurImage
           src={card.src}
           alt={card.title}
-          className="absolute inset-0 z-10 object-cover"
+          className="absolute inset-0 z-10 object-cover group-hover:blur-0 group-hover:scale-105"
         />
+     
       </motion.button>
     </>
   );
 };
 
-// Removed Next.js specific props to satisfy Vite/standard HTML Image types
 export const BlurImage = ({
   src,
   className,
@@ -223,11 +228,13 @@ export const BlurImage = ({
   const [isLoading, setLoading] = useState(true);
   return (
     <img
-      className={cn(
-        "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
+    className={cn(
+        "h-full w-full blur-sm transition-[filter,transform] duration-300 ease-in-out hover:blur-none",
+        "hover:blur-none group-hover:blur-none group-hover:scale-105",
+        isLoading && "opacity-70",
+        !isLoading && "opacity-100",
         className
-      )}
+)}
       onLoad={() => setLoading(false)}
       src={src}
       loading="lazy"
