@@ -1,9 +1,13 @@
+import purrFectDay from '../../assets/images/projects/purrfectday.png';
+import wcCookies from '../../assets/images/baking/wcc.png';
+import japaneseStore from '../../assets/images/art/JapaneseStore.png';
+import dubaiChocolate from '../../assets/images/baking/dubaiChocolate.png';
 
 export const projects = [
   {
     category: "programming",
     title: "purrfect day",
-    src: "src/assets/images/projects/purrfectday.png",
+    src: purrFectDay,
     content: (
       <div className="bg-[#DAD0DC] dark:bg-neutral-800 p-6 md:p-8 rounded-2xl w-full">
         <h3 className="text-lg text-[#775d68] font-semibold">Purrfect Day</h3>
@@ -21,7 +25,7 @@ export const projects = [
   {
     category: "art",
     title: "japanese storefront - watercolor ",
-    src: "src/assets/images/art/JapaneseStore.png",
+    src: japaneseStore,
     content: (
       <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-6 md:p-8 rounded-2xl">
     
@@ -38,7 +42,7 @@ export const projects = [
   {
     category: "baking",
     title: "my signature brown butter white chocolate chip cookies",
-    src: "src/assets/images/baking/wcc.png",
+    src: wcCookies,
     content: (
       <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-6 md:p-8 rounded-2xl">
         <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm md:text-base font-sans max-w-3xl mx-auto">
@@ -51,5 +55,22 @@ export const projects = [
       </div>
     ),
   },
+   {
+    category: "baking",
+    title: "dubai inspired chocolate cake",
+    src: dubaiChocolate,
+    content: (
+      <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-6 md:p-8 rounded-2xl">
+        <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm md:text-base font-sans max-w-3xl mx-auto">
+        my take on a the dubai chocolate, but in cake form. 
+        </p>
+        <div className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 list-disc pl-5">
+          
+        
+        </div>
+      </div>
+    ),
+  },
+  
 
 ]
