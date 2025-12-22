@@ -15,8 +15,7 @@ export const mockProjects: ProjectItem[] = [
     title: 'personal portfolio ',
     category: 'programming',
     image: portfolio,
-    description: 'Personal portfolio built with React, TypeScript, and Vite.',
-    projectUrl: '/projects/p-001',
+    description: 'Personal portfolio built with React,TypeScript, Vite and TailwindCSS.'
     
   },
   {

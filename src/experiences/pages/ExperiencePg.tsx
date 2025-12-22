@@ -1,13 +1,17 @@
 import { Navigation } from "@/components/navigation/Navigation";
+import ExperienceHeader from "@/experiences/components/ExperienceHeader";
+import ExperienceTimeline from "@/experiences/components/ExperienceTimeline";
+import { experienceData } from "@/data/experienceData";
 
-
-export const ExperiencePg = () => {
+export default function ExperiencePg() {
     return (
-        <div id="experiences" className="flex flex-col items-center justify-center">
+    
+        <section id="experiences" className="flex flex-col items-center justify-start">
             <Navigation />
-            <div className="text-3xl font-montserrat font-bold mt-20">
-                Experiences Page Coming Soon!
+            <div className=" flex flex-col gap-10">
+                <ExperienceHeader />
+                <ExperienceTimeline items={experienceData} />
             </div>
-        </div>
-    )
+        </section>
+    );
 }

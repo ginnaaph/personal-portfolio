@@ -1,7 +1,7 @@
 import { HomePg } from "./home/page/HomePg";
 import { ExplorationsPg } from "./explorations/pages/ExplorationsPg";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import { ExperiencePg } from "./experiences/pages/ExperiencePg";
+import ExperiencePg from "./experiences/pages/ExperiencePg";
 import { ContactPg } from "./contact/page/ContactPg";
 
 export const App = () => {
