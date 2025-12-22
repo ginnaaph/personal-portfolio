@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 body { 
     font-family: 'Karla', sans-serif;
 }
@@ -24,6 +25,12 @@ h3 {
 
 @theme{
   --font-display: 'Noticia Text', serif;
+}
+@theme{
+  --color-main: #775d68;
+  --color-accent: #dad0dc;
+  --color-accent-2: #7e738e;
+  
 }
 
 @theme inline {

@@ -1,7 +1,7 @@
 import { ProjectCarousel } from "./ProjectCarosel"
 export const LatestCreations = () => {
     return (
-        <div>
+        <div className="relative -mt-px">
             <ProjectCarousel />
         </div>
     )

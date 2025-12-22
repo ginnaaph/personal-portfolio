@@ -1,9 +1,13 @@
 import AboutMeImage from '../assets/images/computer.png'
 import Signature from '../assets/images/signature.png'
 import { AlbertEinsteinQuote } from './Quotes'
+import { WaveDivider } from '@/components/ui/WaveDivider'
 export const AboutMe = () => { 
     return (
-        <div className="flex p-20 mt-10 bg-[#DAD0DC] rounded-lg">
+        <section id="aboutme" className="relative bg-[#DAD0DC]">
+        <WaveDivider color="white"  flip={false} className='-mb-px' />
+         
+        <div className="flex p-10">
              <img src={AboutMeImage} className="w-70 h-70 mt-20" alt="aboutMeImage" />
 
     <div className="flex flex-col align-items-center w-5/6 p-20 justify-content-center "> 
@@ -24,7 +28,9 @@ export const AboutMe = () => {
         <AlbertEinsteinQuote />
         </div>
     </div>
-       
-    </div>
+       </div>
+    
+      <WaveDivider color="#775d68" flip={true} className="-mt-px"/>
+    </section>
     ) 
 }

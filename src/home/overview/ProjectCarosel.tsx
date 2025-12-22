@@ -8,7 +8,7 @@ export function ProjectCarousel() {
   ));
 
   return (
-     <div className="w-full  py-12">
+     <div className="relative -mt-px">
         <div className="mx-auto  w-full px-4 md:px-6 lg:px-8">
           <div className="w-full px-4">
             <div className="bg-[#775d68] w-full">
