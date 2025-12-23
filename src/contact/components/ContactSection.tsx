@@ -41,7 +41,7 @@ export function ContactSection({
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={label}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-white border bg-main border-main hover:border-[#775d68] hover:bg-neutral-50 transition"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-white border bg-main border-main hover:border-main hover:bg-accent-2 transition"
             >
               {Icon ? <Icon size={22} title={label} /> : <span className="text-sm">{label}</span>}
             </a>

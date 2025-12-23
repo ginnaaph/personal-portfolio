@@ -94,7 +94,7 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="inline-flex items-center justify-center rounded-md bg-[#775d68] px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 disabled:opacity-60"
+              className="inline-flex items-center justify-center rounded-md bg-main px-4 py-2 text-sm font-medium text-white hover:bg-accent-2 disabled:opacity-60"
             >
               {status === "submitting" ? "Sending…" : submitLabel}
             </button>

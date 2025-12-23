@@ -9,7 +9,7 @@ export const ExplorationsPg = () => {
         <div id="explorations" className="w-full min-h-screen flex flex-col">
             <Navigation />
             <main className="w-full flex-1 bg-[#DAD0DC]">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+                <div className="mx-auto max-w-384 px-4 sm:px-6 lg:px-8 py-10 md:py-14">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                         <section className="md:col-span-4 md:sticky md:top-24 self-start bg-white rounded-2xl border border-neutral-200 p-4 md:p-6 shadow-sm">
                             <ExplorationHeader />

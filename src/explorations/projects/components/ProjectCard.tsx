@@ -30,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-center justify-between">
           <h3 className="text-base font-semibold text-gray-900">{project.title}</h3>
           <span
-            className="rounded bg-gray-100 px-2 py-0.5 text-xs font-medium capitalize text-gray-700"
+            className="rounded-lg bg-white px-2 py-0.5 text-xs font-medium capitalize text-main border border-main "
             aria-label={`Category: ${project.category}`}
           >
             {project.category}
