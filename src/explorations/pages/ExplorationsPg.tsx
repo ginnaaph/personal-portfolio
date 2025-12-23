@@ -1,6 +1,7 @@
 import { Navigation } from "../../components/navigation/Navigation"
 import { ExplorationHeader } from "../components/ExplorationsHeader"
 import { Footer } from "../../home/Footer"
+import { IconStack } from "../components/IconStacks"
 import { ProjectGrid } from "../projects/components/ProjectGrid"
 import { mockProjects } from "../projects/mockData"
 export const ExplorationsPg = () => {
@@ -14,7 +15,7 @@ export const ExplorationsPg = () => {
            
             <ProjectGrid projects={mockProjects} />
             </div>
-
+            <IconStack />
             <Footer /> 
 
             
