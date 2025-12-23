@@ -2,7 +2,7 @@ import { IntroductionBlurb } from "./IntroductionBlurb";
 import { IconStack } from "./IconStacks";
 export const ExplorationHeader =() => { 
     return (
-        <div className="flex flex-col items-start mt-3 justify-start">
+        <div className="flex flex-col items-start mt-3 justify-start pb-9">
            
             <IntroductionBlurb />
               <p className="mt-2 ml-2">

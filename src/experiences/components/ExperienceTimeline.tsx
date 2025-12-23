@@ -24,18 +24,18 @@ export default function ExperienceTimeline({ items }: { items: ExperienceItem[] 
               <div className={`pl-4 md:pl-0 ${sideClass} bg-accent-2 gap-2 rounded-lg`}>
                 <article className="inline-block rounded border border-accent-2 bg-[#DAD0DC] p-6 shadow-sm backdrop-blur-sm transition-colors dark:border-accent-2 dark:bg-gray-900/40">
                   <header className="mb-2">
-                    <h3 className="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                    <div className="text-xl font-semibold  font-montserrat leading-6 text-gray-900 dark:text-gray-100">
                       {item.title}
-                    </h3>
-                    <div className="mt-1 text-md text-main dark:text-[#DAD0DC]">
+                    </div>
+                    <div className="mt-1 text-md text-main dark:text-[#DAD0DC] font-['noticia_text']">
                       {item.company}
                       {item.location ? <span className="ml-2 text-main">• {item.location}</span> : null}
                     </div>
-                    <p className="mt-1 text-xs uppercase tracking-wide text-gray-500 dark:text-[#DAD0DC]">
+                    <p className="mt-1 text-xs uppercase tracking-wide dark:text-[#DAD0DC]">
                       {item.startDate} — {item.endDate}
                     </p>
                   </header>
-                  <p className="text-sm leading-6 text-gray-700 dark:text-gray-300">{item.description}</p>
+                  <p className="text-sm leading-6  dark:text-gray-300">{item.description}</p>
                 </article>
               </div>
             </li>

@@ -30,8 +30,8 @@ export function ContactSection({
   return (
     <section className="w-full px-4 md:px-6 py-12 bg-[#DAD0DC]">
       <div className="mx-auto max-w-3xl text-center">
-        <div className="text-3xl md:text-4xl font-semibold tracking-tight">{title}</div>
-        <p className="mt-3 text-base md:text-lg text-neutral-600">{subtitle}</p>
+        <div className="text-4xl md:text-4xl  font-montserrat tracking-tight">{title}</div>
+        <p className="mt-3 text-base md:text-lg font-['noticia_text'] ">{subtitle}</p>
 
         <div className="mt-6 flex items-center justify-center gap-4 md:gap-6">
           {socials.map(({ label, href, icon: Icon }) => (
