@@ -35,8 +35,8 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                 setActive(prev);
               }
             }}
-            className={`rounded-full px-3 py-1 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
-              active === cat ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+            className={`rounded-full px-3 py-1 text-sm  transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+              active === cat ? 'bg-main text-white' : 'bg-white text-main hover:bg-gray-200'
             }`}
           >
             {cat}
@@ -48,7 +48,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
         id={`panel-${active}`}
         role="tabpanel"
         aria-live="polite"
-        className="columns-1 gap-4 sm:columns-2 lg:columns-3"
+        className="columns-1 sm:columns-2 lg:columns-3 gap-x-4"
       >
         {filtered.map((p) => (
           <ProjectCard key={p.id} project={p} />
