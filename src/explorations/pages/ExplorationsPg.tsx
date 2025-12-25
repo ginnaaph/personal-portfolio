@@ -1,6 +1,6 @@
 import { Navigation } from "../../components/navigation/Navigation"
 import { ExplorationHeader } from "../components/ExplorationsHeader"
-import { Footer } from "../../home/Footer"
+import { Footer } from "../../home/components/Footer"
 import { ProjectGrid } from "../projects/components/ProjectGrid"
 import { mockProjects } from "../projects/mockData"
 

@@ -10,6 +10,6 @@ export const HighlightedText = ({ text, delay = 0 }: HighlightedTextProps) => {
         <HighlightText
             text={text}
             delay={delay}
-            className="text-4xl font-bold bg-linear-to-r from-[#Dad0dc] to-[#7e738e] dark:from-[#DAD0DC] dark:to-[#7e738e] text-right"/>
+            className="text-4xl font-bold bg-linear-to-r from-[#Dad0dc] to-accent-2 dark:from-[#DAD0DC] dark:to-accent-2 text-right"/>
 
     )}

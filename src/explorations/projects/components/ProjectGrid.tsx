@@ -36,7 +36,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               }
             }}
             className={`rounded-full px-3 py-1 text-sm  transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
-              active === cat ? 'bg-main text-white' : 'bg-white text-main hover:bg-gray-200'
+              active === cat ? 'bg-main text-white' : 'bg-white text-main hover:bg-main/10'
             }`}
           >
             {cat}

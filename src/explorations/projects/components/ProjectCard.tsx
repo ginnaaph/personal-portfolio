@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { ProjectItem } from '../types';
 import { ProjectPreviewModal } from './ProjectPreviewModal';
+import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -27,14 +28,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </button>
 
       <div className="px-3 py-2">
-        <div className="flex items-center justify-between">
-          <h3 className="text-base font-semibold text-gray-900">{project.title}</h3>
-          <span
-            className="rounded-lg bg-white px-2 py-0.5 text-xs font-medium capitalize text-main border border-main "
-            aria-label={`Category: ${project.category}`}
-          >
+        <div className="flex flex-col items-start justify-center gap-2">
+          <div className=" font-semibold text-lg text-accent-2 ">{project.title}</div>
+          <Badge variant="default" aria-label={`Category: ${project.category}`}>
             {project.category}
-          </span>
+          </Badge>
         </div>
       </div>
 

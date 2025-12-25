@@ -6,6 +6,7 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "./badge";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { CarouselContext } from "./carousel-context";
@@ -104,14 +105,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-[#775d68]" />
+            <IconArrowNarrowLeft className="h-6 w-6 text-main" />
           </button>
           <button
             className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#DAD0DC] disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-[#775d68]" />
+            <IconArrowNarrowRight className="h-6 w-6 text-main" />
           </button>
         </div>
         </div>
@@ -164,7 +165,7 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-[#775d68]/40 backdrop-blur-lg"
+              className="fixed inset-0 h-full w-full bg-main/40 backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -180,10 +181,10 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p className="text-base font-medium text-[#775d68] dark:text-[#DAD0DC]">
+              <motion.p className="text-base  text-main dark:text-[#DAD0DC]">
                 {card.category}
               </motion.p>
-              <motion.p className="mt-2 text-2xl font-semibold text-[#775d68] md:text-5xl dark:text-[#DAD0DC]">
+              <motion.p className="mt-2 font-semibold text-main md:text-5xl dark:text-[#DAD0DC]">
                 {card.title}
               </motion.p>
               <div className="py-7">{card.content}</div>
@@ -197,15 +198,15 @@ export const Card = ({
         onClick={handleOpen}
         className="group relative z-10 flex h-80 w-70 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-70 md:w-70 dark:bg-neutral-900"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-[#775d68]/50 via-transparent to-transparent" />
-        <div className="relative z-40 p-4">
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-main/50 via-transparent to-transparent" />
+        <div className="relative z-40 p-4 items-start justify-start flex flex-col">
          
-          <p className="text-left font-semibold text-balance text-[#7e738e] md:text-3xl bg-[#dad0dc]/70 mt-2 px-2 py-1 rounded-md">
+          <p className="text-left font-semibold text-balance text-main md:text-2xl bg-[#dad0dc]/70 mt-2 px-2 py-1 rounded-md">
             {card.title}
           </p>
-           <p className="text-left flex justify-start text-sm mt-1 font-medium text-[#7e738e] md:text-base bg-[#dad0dc]/60  px-2 py-1 rounded-md">
+          <Badge variant="default" className="mt-2 "aria-label={`Category: ${card.category}`}>
             {card.category}
-          </p>
+          </Badge>
         </div>
         
         <BlurImage

@@ -5,22 +5,27 @@
 
 
 body { 
-    font-family: 'Karla', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 h1 {
     font-family: 'Noticia Text', serif;
     font-size: 28px;
     font-weight: 650;
+    font-color: #775d68;
 }
 
 h2 {
   font-family: 'Noticia Text', serif;
   font-size: 20px;
   font-weight: 700;
+  font-color: #775d68;
 }
 
 h3 { 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noticia Text', serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-color: #7e738e;
 }
 
 

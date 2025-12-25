@@ -1,5 +1,5 @@
 import { Navigation } from "@/components/navigation/Navigation";
-import { Footer } from "../../home/Footer";
+import { Footer } from "../../home/components/Footer";
 import { ContactSection } from "../components/ContactSection";
 import { ContactForm } from "../components/ContactForm";
 

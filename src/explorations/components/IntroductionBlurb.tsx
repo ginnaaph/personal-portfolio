@@ -5,7 +5,7 @@ export const IntroductionBlurb = () => {
     return (
 <>
 
-    <div className="text-4xl font-montserrat leading-relaxed max-w-5xl text-left px-2 flex justify-start">Come <span>
+    <div className="text-4xl font-montserrat leading-relaxed max-w-5xl font-semibold text-left px-2 flex justify-start">Come <span>
     <ExplorationRotatingText
         delay={0}
         y={10}

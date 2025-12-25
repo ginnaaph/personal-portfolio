@@ -1,5 +1,5 @@
-import AboutMeImage from '../assets/images/computer.png'
-import Signature from '../assets/images/signature.png'
+import AboutMeImage from '../../assets/images/me/computer.png'
+import Signature from '../../assets/images/me/signature.png'
 import { AlbertEinsteinQuote } from './Quotes'
 import { WaveDivider } from '@/components/ui/WaveDivider'
 export const AboutMe = () => { 
@@ -11,7 +11,7 @@ export const AboutMe = () => {
              <img src={AboutMeImage} className="w-70 h-70 mt-20" alt="aboutMeImage" />
 
     <div className="flex flex-col align-items-center w-5/6 p-20 justify-content-center "> 
-        <div  className="text-4xl"> A litte about me, <span className="text-[#7e738E] text-3xl italic font-['Noticia_Text']">the curious mind behind the page... </span></div>
+        <div  className="text-4xl font-semibold"> A litte about me, <span className="text-[#7e738E] text-4xl italic font-['Noticia_Text'] font-semibold">the curious mind behind the page... </span></div>
         <div className="flex justify-center mt-2">Welcome! I'm Gina, a lifelong learner, self-starter, and creative builder with a deep love for figuring 
             things out. This portfolio is more than a collection of work, it's a reflection of who I am. Curiousity is the 
             heart of my personal brand. It is what led to me teach myself how to code, to draw and paint, and to explore how 

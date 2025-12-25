@@ -1,4 +1,4 @@
-import HeroImage from '../../assets/images/hellohero.png'
+import HeroImage from '../../assets/images/me/hellohero.png'
 import { HighlightedText } from '@/components/HighlightedText'
 import { ViewProjectsBtn } from '@/components/ui/ViewProjectsBtn'
 
@@ -10,8 +10,8 @@ export const Hero = () => {
                 <div className="flex flex-row items-center justify-center p-20 mt-10 ml-10 justify-contents-center">
                 <img src={HeroImage} alt="hero" className="w-50 h-50 rounded-full" />
                 <div className="flex flex-col items-start">
-                <h1 className="text-3xl italic">  Hi, there! </h1>
-                <p className="font-montserrat text-4xl font-bold tracking-wide">I'm <HighlightedText text={text} /> </p>
+                <div className=" text-3xl italic ">  Hi, there! </div>
+                <p className="font-monserrat text-4xl font-bold tracking-wide">I'm <HighlightedText text={text} /> </p>
            <p className="text-xl mt-1"> a curious builder with a love for solving problems and creating meaningful things, from code to art.</p>
               <div className="mt-10 items-center "> 
            

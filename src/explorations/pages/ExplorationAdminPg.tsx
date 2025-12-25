@@ -40,7 +40,7 @@ export default function ExplorationAdminPg() {
 
   return (
     <div className="mx-auto max-w-6xl p-4 md:p-8">
-      <h1 className="mb-6 text-2xl font-semibold">Exploration Admin (Generator)</h1>
+      <h1 className="mb-6 text-2xl font-semibold text-main">Exploration Admin (Generator)</h1>
       <p className="mb-8 text-sm text-neutral-600">
         Fill out the form → click Copy → paste the object into src/explorations/data/explorationsData.ts
       </p>
@@ -49,7 +49,7 @@ export default function ExplorationAdminPg() {
         {/* LEFT: Form builder */}
         <div className="space-y-6">
           <div>
-            <label className="block text-sm font-medium">Title</label>
+            <label className="block text-md">Title</label>
             <input
               className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
               value={post.title}
@@ -59,7 +59,7 @@ export default function ExplorationAdminPg() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Slug</label>
+            <label className="block text-md ">Slug</label>
             <input
               className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
               value={post.slug}
@@ -72,7 +72,7 @@ export default function ExplorationAdminPg() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Category</label>
+            <label className="block text-sm ">Category</label>
             <select
               className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
               value={post.category}
@@ -87,7 +87,7 @@ export default function ExplorationAdminPg() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Summary</label>
+            <label className="block text-md">Summary</label>
             <textarea
               className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
               rows={4}
@@ -98,7 +98,7 @@ export default function ExplorationAdminPg() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Tags (comma-separated)</label>
+            <label className="block text-md">Tags (comma-separated)</label>
             <input
               className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
               value={tagsString}
@@ -109,7 +109,7 @@ export default function ExplorationAdminPg() {
 
           <div className="grid gap-3 md:grid-cols-2">
             <div>
-              <label className="block text-sm font-medium">Hero Image src</label>
+              <label className="block text-md">Hero Image src</label>
               <input
                 className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
                 value={post.heroImage?.src ?? ""}
@@ -118,7 +118,7 @@ export default function ExplorationAdminPg() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Hero Image alt</label>
+              <label className="block text-md">Hero Image alt</label>
               <input
                 className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
                 value={post.heroImage?.alt ?? ""}
@@ -132,7 +132,7 @@ export default function ExplorationAdminPg() {
           <div className="rounded-2xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center gap-3">
               <select
-                className="w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
+                className="w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-md outline-none focus:ring-2 focus:ring-neutral-800"
                 value={newSectionType}
                 onChange={(e) => setNewSectionType(e.target.value as SectionType)}
               >
@@ -166,7 +166,7 @@ export default function ExplorationAdminPg() {
 
           <div className="rounded-2xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center justify-between">
-              <div className="text-lg font-semibold">Generated Output</div>
+              <div className="text-lg text-main font-semibold">Generated Output</div>
               <div className="flex items-center gap-2">
                 <Button variant="secondary" onClick={copyOutput}>{copied ? "Copied!" : "Copy"}</Button>
               </div>
