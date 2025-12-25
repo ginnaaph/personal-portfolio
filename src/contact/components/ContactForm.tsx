@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { BaseUIButton as Button } from "@/components/ui/base-button"
 
 type FormData = {
   name: string
@@ -91,13 +92,9 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
           </div>
 
           <div className="flex items-center gap-3">
-            <button
-              type="submit"
-              disabled={status === "submitting"}
-              className="inline-flex items-center justify-center rounded-md bg-main px-4 py-2 text-sm font-medium text-white hover:bg-accent-2 disabled:opacity-60"
-            >
+            <Button type="submit" disabled={status === "submitting"}>
               {status === "submitting" ? "Sending…" : submitLabel}
-            </button>
+            </Button>
             {status === "success" && (
               <span className="text-sm text-green-200">Message sent! I’ll get back to you soon.</span>
             )}
