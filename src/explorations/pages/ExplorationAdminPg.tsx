@@ -166,7 +166,7 @@ export default function ExplorationAdminPg() {
 
           <div className="rounded-2xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center justify-between">
-              <h2 className="text-sm font-semibold">Generated Output</h2>
+              <div className="text-lg font-semibold">Generated Output</div>
               <div className="flex items-center gap-2">
                 <Button variant="secondary" onClick={copyOutput}>{copied ? "Copied!" : "Copy"}</Button>
               </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import type { ProjectItem } from '../types';
+import type { ProjectItem } from '@/explorations/projects/types';
 
 interface ProjectPreviewModalProps {
   open: boolean;

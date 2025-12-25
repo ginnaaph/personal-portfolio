@@ -1,12 +1,14 @@
 import { HomePg } from "./home/page/HomePg";
 import { ExplorationsPg } from "./explorations/pages/ExplorationsPg";
-import ExplorationAdminPg from "./explorations/pages/ExplorationAdminPg";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import ExperiencePg from "./experiences/pages/ExperiencePg";
 import { ContactPg } from "./contact/page/ContactPg";
 
 export const App = () => {
-    
+        const AdminPage = import.meta.env.DEV
+            ? lazy(() => import("./explorations/pages/ExplorationAdminPg"))
+            : null;
 
     return (
         <BrowserRouter>
@@ -14,7 +16,16 @@ export const App = () => {
             <Route index element={<HomePg />} />
             <Route path="/" element={<HomePg />} />
             <Route path="explorations" element={<ExplorationsPg />} />
-            <Route path="explorations/admin" element={<ExplorationAdminPg />} />
+                        {import.meta.env.DEV && AdminPage && (
+                            <Route
+                                path="explorations/admin"
+                                element={
+                                    <Suspense fallback={<div className="p-4">Loading…</div>}>
+                                        <AdminPage />
+                                    </Suspense>
+                                }
+                            />
+                        )}
             <Route path="experiences" element={<ExperiencePg />} />
             <Route path="contact" element={<ContactPg />} />
         </Routes>

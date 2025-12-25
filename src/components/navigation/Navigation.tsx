@@ -10,7 +10,7 @@ export const Navigation = () => {
   const navigate = useNavigate();
 
     return (
-      <div className="w-full text-lg  text-white font-montserrat items-center justify-between py-4 bg-[#7e738e]">
+      <div className="w-full text-lg  text-white font-montserrat items-center justify-between py-4 bg-accent-2">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -19,6 +19,13 @@ export const Navigation = () => {
             <NavigationMenuItem>
               <NavigationMenuLink href="#explorations" className="text-lg uppercase" onClick={() => navigate("/explorations")}>Explorations</NavigationMenuLink>
             </NavigationMenuItem>
+            {import.meta.env.DEV && (
+              <NavigationMenuItem>
+                <NavigationMenuLink href="#admin" className="text-lg uppercase" onClick={() => navigate("/explorations/admin")}>
+                  Admin
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            )}
             <NavigationMenuItem>
               <NavigationMenuLink href="#experiences" className="text-lg uppercase " onClick={() => navigate("/experiences")}>Experiences</NavigationMenuLink>
             </NavigationMenuItem>

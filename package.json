@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:admin-hidden": "vite build && node scripts/assert-no-admin-in-prod.mjs",
+    "test:admin-guard-source": "node scripts/assert-dev-guard-source.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",

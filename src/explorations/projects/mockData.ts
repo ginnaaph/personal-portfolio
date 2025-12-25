@@ -1,4 +1,4 @@
-import type { ProjectItem } from './types';
+import type { ProjectItem } from '@/explorations/projects/types';
 import portfolio from '../../assets/images/projects/portfolio.png';
 import wcCookies from '../../assets/images/baking/wcc.png';
 import mangoMousse from '../../assets/images/baking/mangoMousse.png';

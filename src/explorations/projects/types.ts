@@ -5,8 +5,9 @@ export interface ProjectItem {
   title: string;
   category: ProjectCategory;
   image: string;
-  description: string;
+  previewDescription?: string;
+  slug?: string;
+  fullContent?: string;
   projectUrl?: string;
-  liveUrl?: string;
-  galleryUrl?: string;
+  [key: string]: unknown;
 }
