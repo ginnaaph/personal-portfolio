@@ -57,9 +57,9 @@ export function ProjectPreviewModal({ open, project, onClose }: ProjectPreviewMo
             alt={`${project.title} preview`}
             className="mb-3 h-auto w-full rounded-md object-cover"
           />
-          <p className="text-sm text-gray-700">{project.description}</p>
+          <p className="text-sm text-gray-700">{project.previewDescription}</p>
 
-          {(project.projectUrl || project.liveUrl || project.galleryUrl) && (
+          {(project.projectUrl ) && (
             <div className="mt-4 flex flex-wrap gap-2">
               {project.projectUrl && (
                 <a
@@ -68,29 +68,12 @@ export function ProjectPreviewModal({ open, project, onClose }: ProjectPreviewMo
                   rel="noreferrer"
                   className="inline-flex items-center rounded bg-gray-900 px-3 py-1 text-sm font-medium text-white hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
-                  View Project
+                  View Full Page
                 </a>
               )}
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center rounded bg-blue-600 px-3 py-1 text-sm font-medium text-white hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                >
-                  Live Demo
-                </a>
-              )}
-              {project.galleryUrl && (
-                <a
-                  href={project.galleryUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center rounded bg-purple-600 px-3 py-1 text-sm font-medium text-white hover:bg-purple-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
-                >
-                  Gallery
-                </a>
-              )}
+             
+            
+            
             </div>
           )}
         </div>

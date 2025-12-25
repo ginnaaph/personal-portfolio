@@ -15,7 +15,8 @@ export const mockProjects: ProjectItem[] = [
     title: 'personal portfolio ',
     category: 'programming',
     image: portfolio,
-    description: 'Personal portfolio built with React,TypeScript, Vite and TailwindCSS.'
+    previewDescription: 'Personal portfolio built with React,TypeScript, Vite and TailwindCSS.',
+    slug: 'personal-portfolio',
     
   },
   {
@@ -23,7 +24,8 @@ export const mockProjects: ProjectItem[] = [
     title: 'brown butter white chocolate chip cookies',
     category: 'baking',
     image: wcCookies,
-    description: 'go to cookie recipe with brown butter and white chocolate chips',
+    previewDescription: 'go to cookie recipe with brown butter and white chocolate chips',
+    slug: 'brown-butter-white-chocolate-chip-cookies'
     
   },
   {
@@ -31,14 +33,16 @@ export const mockProjects: ProjectItem[] = [
     title: 'japanese storefront watercolor',
     category: 'art',
     image: japaneseStore,
-    description: 'loose watercolor painting of a traditional japanese storefront.',
+    previewDescription: 'loose watercolor painting of a traditional japanese storefront.',
+    slug: 'japanese-storefront-watercolor'
   },
   {
     id: 'p-004',
     title: 'purrfect day ',
     category: 'programming',
     image: purrFectDay,
-    description: 'a gamified productivity app featuring a virtual cat companion.',
+    previewDescription: 'a gamified productivity app featuring a virtual cat companion.',
+    slug: 'purrfect-day',
     projectUrl: '/projects/p-004'
   },
   {
@@ -46,21 +50,24 @@ export const mockProjects: ProjectItem[] = [
     title: 'ferry building',
     category: 'art',
     image: ferryBuilding,
-    description: 'loose watercolor ink drawing of the San Francisco Ferry Building.',
+    previewDescription: 'loose watercolor ink drawing of the San Francisco Ferry Building.',
+    slug: 'ferry-building'
   },
   {
     id: 'p-006',
     title: 'mocha chocolate cake',
     category: 'baking',
     image: mochaChocolate,
-    description: 'Mocha chocolate cake with rich coffee and chocolate flavors.'
+    previewDescription: 'Mocha chocolate cake with rich coffee and chocolate flavors.',
+    slug: 'mocha-chocolate-cake'
   },
   {
     id: 'p-007',
     title: 'dubai chocolate cake',
     category: 'baking',
     image: dubaiChocolate,
-    description: 'dubai inspired chocolate cake ',
+    previewDescription: 'dubai inspired chocolate cake ',
+    slug: 'dubai-chocolate-cake',
     projectUrl: '/projects/p-007'
   },
   {
@@ -68,13 +75,15 @@ export const mockProjects: ProjectItem[] = [
     title: 'mango mousse cake',
     category: 'baking',
     image: mangoMousse,
-    description: 'Mango mousse cake with a light and creamy texture.'
+    previewDescription: 'Mango mousse cake with a light and creamy texture.',
+    slug: 'mango-mousse-cake'
   },
   {
     id: 'p-009',
     title: 'sf painted ladies',
     category: 'art',
     image: paintedLadies,
-    description: 'watercolor painting of the iconic san francisco painted ladies houses.',
+    previewDescription: 'watercolor painting of the iconic san francisco painted ladies houses.',
+    slug: 'sf-painted-ladies'
   }
 ];

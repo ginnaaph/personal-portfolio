@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { BaseUIButton as Button } from "@/components/ui/base-button"
 export type ContactCTAProps = {
   title?: string
   blurb?: string
@@ -18,9 +19,9 @@ export function ContactCTA({
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
         <p className="mt-3 font-['noticia_text'] ">{blurb}</p>
         <div className="mt-6">
-            <button  onClick={() => navigate("/contact")} className="inline-flex items-center justify-center rounded-md bg-main px-4 py-2 text-sm font-medium text-white hover:bg-accent-2 hover:text-white">
+            <Button onClick={() => navigate("/contact")}>
                 Contact Me
-            </button>
+            </Button>
         </div>
       </div>
     </section>

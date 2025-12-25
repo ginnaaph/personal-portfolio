@@ -1,6 +1,5 @@
 import HeroImage from '../../assets/images/hellohero.png'
 import { HighlightedText } from '@/components/HighlightedText'
-import { DLResumeBttn } from '@/components/ui/DLResumeBttn'
 import { ViewProjectsBtn } from '@/components/ui/ViewProjectsBtn'
 
 
@@ -14,8 +13,8 @@ export const Hero = () => {
                 <h1 className="text-3xl italic">  Hi, there! </h1>
                 <p className="font-montserrat text-4xl font-bold tracking-wide">I'm <HighlightedText text={text} /> </p>
            <p className="text-xl mt-1"> a curious builder with a love for solving problems and creating meaningful things, from code to art.</p>
-              <div className="mt-10 items-center flex gap-2"> 
-                <DLResumeBttn />
+              <div className="mt-10 items-center "> 
+           
                 <ViewProjectsBtn />
               </div>
                 </div>

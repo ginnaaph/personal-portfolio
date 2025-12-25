@@ -30,7 +30,7 @@ const iconTechStacks: IconStackItem[] = [
 
 export const IconStack = () => {
     return (
-        <div className="w-full flex items-center justify-center gap-2 md:gap-4 py-4">
+        <div className="w-full flex items-center justify-center gap-2 md:gap-4 py-2">
             {iconTechStacks.map(({ icon: Icon, color }) => (
                 <div key={color} className="flex flex-col items-center select-none">
                     <Icon size={18} color={color} />
