@@ -5,7 +5,7 @@ export const ViewProjectsBtn = () => {
     const navigate = useNavigate();
 
     return (
-        <Button onClick={() => navigate("/#projects")}>   
+        <Button onClick={() => navigate("/#explorations")}>   
             View Projects
         </Button>
     )
