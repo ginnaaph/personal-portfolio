@@ -1,4 +1,4 @@
-import { ExplorationRotatingText } from "@/components/RotatingText";
+import { ExplorationRotatingText } from "@/components/ui/text/RotatingText";
 
 export const IntroductionBlurb = () => {
     const text = ['build.', 'paint.', 'draw.', 'code.', 'create.', 'innovate.', 'explore.'];

@@ -1,4 +1,4 @@
-import { Navigation } from "@/components/navigation/Navigation";
+import { Navigation } from "@/components/ui/navigation/Navigation";
 import ExperienceHeader from "@/experiences/components/ExperienceHeader";
 import ExperienceTimeline from "@/experiences/components/ExperienceTimeline";
 import { experienceData } from "@/data/experienceData";

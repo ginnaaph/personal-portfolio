@@ -1,5 +1,6 @@
 // Exploration Admin Generator
 // Fill out the form → click Copy → paste the object into src/explorations/data/explorationsData.ts
+import  { Navigation } from '@/components/ui/navigation/Navigation';
 
 import { useMemo, useState } from "react";
 import { BaseUIButton as Button } from "@/components/ui/base-button";
@@ -39,8 +40,12 @@ export default function ExplorationAdminPg() {
   const tagsString = post.tags?.join(", ") ?? "";
 
   return (
-    <div className="mx-auto max-w-6xl p-4 md:p-8">
-      <h1 className="mb-6 text-2xl font-semibold text-main">Exploration Admin (Generator)</h1>
+    <div>
+  
+      <Navigation/>
+        <div className="mx-auto max-w-6xl md:p-8 shrink-0">
+      <h1 className="mb-6 text-2xl font-semibold text-main pt-3
+      ">Exploration Admin (Generator)</h1>
       <p className="mb-8 text-sm text-neutral-600">
         Fill out the form → click Copy → paste the object into src/explorations/data/explorationsData.ts
       </p>
@@ -177,6 +182,7 @@ export default function ExplorationAdminPg() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
@@ -355,5 +361,6 @@ function SectionCard(props: {
         );
       })()}
     </div>
+  
   );
 }

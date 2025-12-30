@@ -17,8 +17,8 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
   }, [projects, active]);
 
   return (
-    <section aria-label="Projects" className="w-full p-3 md:p-8 lg:p-8">
-      <div className="mb-4 flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter projects by category">
+    <section aria-label="Projects" className="w-full md:p-7 lg:p-8 pt-0 place-items-stretch">
+      <div className="mb-4 flex flex-wrap pt-0 items-center gap-2" role="tablist" aria-label="Filter projects by category">
         {categories.map((cat, i) => (
           <button
             key={cat}

@@ -3,7 +3,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuLink,
-} from "../ui/navigation-menu"
+} from '@/components/ui/navigation-menu'
 import { useNavigate } from "react-router-dom"
 
 export const Navigation = () => {
