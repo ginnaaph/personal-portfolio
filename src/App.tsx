@@ -4,6 +4,7 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import ExperiencePg from "./experiences/pages/ExperiencePg";
 import { ContactPg } from "./contact/page/ContactPg";
+import { AboutMePg } from "./aboutme/AboutMePg";
 
 export const App = () => {
         const AdminPage = import.meta.env.DEV
@@ -28,6 +29,7 @@ export const App = () => {
                         )}
             <Route path="experiences" element={<ExperiencePg />} />
             <Route path="contact" element={<ContactPg />} />
+            <Route path="about me" element={<AboutMePg />} />
         </Routes>
         </BrowserRouter>
     );

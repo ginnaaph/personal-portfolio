@@ -30,6 +30,9 @@ export const Navigation = () => {
               <NavigationMenuLink href="#experiences" className="text-md uppercase " onClick={() => navigate("/experiences")}>Experiences</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <NavigationMenuLink href="#about" className="text-md uppercase" onClick={() => navigate("/about")}>About Me</NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuLink href="#contact" className="text-md uppercase" onClick={() => navigate("/contact")}>Contact</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
