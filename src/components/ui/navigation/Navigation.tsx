@@ -10,7 +10,7 @@ export const Navigation = () => {
   const navigate = useNavigate();
 
     return (
-      <div className="w-full text-md  text-white font-montserrat items-center justify-between py-2 bg-accent-2">
+      <div className="text-md w-full text-white font-montserrat items-center justify-between py-2 bg-accent-2">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -30,7 +30,7 @@ export const Navigation = () => {
               <NavigationMenuLink href="#experiences" className="text-md uppercase " onClick={() => navigate("/experiences")}>Experiences</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#about" className="text-md uppercase" onClick={() => navigate("/about")}>About Me</NavigationMenuLink>
+              <NavigationMenuLink href="#about" className="text-md uppercase" onClick={() => navigate("/about-me")}>About Me</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href="#contact" className="text-md uppercase" onClick={() => navigate("/contact")}>Contact</NavigationMenuLink>

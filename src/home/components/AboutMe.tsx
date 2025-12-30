@@ -7,7 +7,7 @@ export const AboutMe = () => {
         <section id="aboutme" className="relative bg-[#DAD0DC]">
         <WaveDivider color="white"  flip={false} className='-mb-px' />
          
-        <div className="flex p-10 w-5/6 mx-auto">
+        <div className="flex p-7  mx-auto w-5/6 mt-10">
              <img src={AboutMeImage} className="w-70 h-70 mt-20" alt="aboutMeImage" />
 
     <div className="flex flex-col align-items-center w-5/6 p-20 justify-content-center "> 

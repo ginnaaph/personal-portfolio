@@ -11,7 +11,7 @@ export const HomePg = () => {
             <Hero />
             
             <AboutMe />
-            <div className=" px-4 py-10 sm:px-6 bg-main">
+            <div className=" px-4 py-10 bg-main">
                 <LatestCardSlider />
             </div>
             <ContactCTA />

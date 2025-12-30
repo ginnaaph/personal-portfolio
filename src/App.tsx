@@ -29,7 +29,7 @@ export const App = () => {
                         )}
             <Route path="experiences" element={<ExperiencePg />} />
             <Route path="contact" element={<ContactPg />} />
-            <Route path="about me" element={<AboutMePg />} />
+            <Route path="about-me" element={<AboutMePg />} />
         </Routes>
         </BrowserRouter>
     );
