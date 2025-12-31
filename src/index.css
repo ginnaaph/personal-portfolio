@@ -3,32 +3,53 @@
 
 @custom-variant dark (&:is(.dark *));
 
-body { 
-    font-family: 'Montserrat', sans-serif;
+@layer base {
+  :root {
+    --font-sans: "Montserrat", ui-sans-serif, system-ui;
+    --font-serif: "Crimson Pro", serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #3a2e36;
+  }
 }
-h1 {
-    font-family: 'Noticia Text', serif;
+
+@layer base {
+  h1 {
+    font-family: var(--font-serif);
     font-size: 28px;
-    font-weight: 650;
-    font-color: #775d68;
-}
-
-h2 {
-  font-family: 'Noticia Text', serif;
-  font-size: 20px;
-  font-weight: 700;
-  font-color: #775d68;
-}
-
-h3 { 
-    font-family: 'Noticia Text', serif;
-    font-size: 20px;
     font-weight: 600;
-    font-color: #7e738e;
-}
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #775d68;
+  }
 
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #775d68;
+  }
+
+  h3 {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #7e738e;
+  }
+}
+@layer base {
+  @media (min-width: 640px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 28px; }
+  }
+}
 @theme{
-  --font-display: 'Noticia Text', serif;
+  --font-display: 'Montserrat', sans-serif;
 }
 @theme{
   --color-main: #775d68;
@@ -161,8 +182,9 @@ h3 {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
   }
+  
   i, em, .italic {
     font-family: 'Noticia Text', serif;
     font-style: italic;
