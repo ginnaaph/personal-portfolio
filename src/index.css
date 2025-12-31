@@ -8,11 +8,18 @@
     --font-sans: "Montserrat", ui-sans-serif, system-ui;
     --font-serif: "Crimson Pro", serif;
   }
+html, body {
+  overflow-x: hidden;
+}
 
   body {
     font-family: var(--font-sans);
     color: #3a2e36;
+
   }
+  img { max-width: 100%; height: auto; }
+
+
 }
 
 @layer base {

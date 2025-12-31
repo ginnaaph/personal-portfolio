@@ -32,9 +32,11 @@ export function ProjectPreviewSlider({ items, title = 'Latest Projects', ctaHref
   }, [scrollByAmount])
 
   return (
-    <section aria-label="Project previews" className=" p-4 mx-auto w-5/6">
+<section aria-label="Project previews" className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6">
       <div className="mb-4 flex items-center justify-between gap-2">
-        <div className="font-Montserrat text-4xl font-accent font-semibold py-3">{title}</div>
+         <h2 className="font-serif text-2xl font-semibold tracking-tight text-main sm:text-3xl">
+          {title}
+        </h2>
         <div className="hidden items-center gap-2 sm:flex">
           <button
             type="button"
@@ -62,7 +64,7 @@ export function ProjectPreviewSlider({ items, title = 'Latest Projects', ctaHref
         aria-roledescription="carousel"
         aria-label="Project preview slider"
         onKeyDown={onKeyDown}
-        className="-mx-4 flex snap-x snap-mandatory scroll-pt-4 gap-5 sm:gap-6 overflow-x-auto px-4 pb-2 pt-1 [scrollbar-width:none] [-ms-overflow-style:none]"
+        className="hide-scroll -mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-2 pt-1 sm:gap-6"
       >
         {/* Hide scrollbar in WebKit */}
         <style>{`.hide-scroll::-webkit-scrollbar{display:none}`}</style>
