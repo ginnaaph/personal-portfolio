@@ -23,8 +23,8 @@ const defaultSocials: SocialLink[] = [
 ]
 
 export function ContactSection({
-  title = "Contact Me",
-  subtitle = "Have a project in mind or just want to say hi?",
+  title = "I’d love your thoughts, feedback, or just a hello!",
+  subtitle = "Feedback, questions, or quiet observations are always welcome.",
   socials = defaultSocials,
 }: ContactSectionProps) {
   return (

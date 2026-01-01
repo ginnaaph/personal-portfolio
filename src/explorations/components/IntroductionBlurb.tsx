@@ -5,7 +5,7 @@ export const IntroductionBlurb = () => {
 
   return (
     <div className="px-2">
-      <div className="flex flex-wrap items-baseline gap-x-2 text-left font-serif text-2xl font-semibold leading-tight text-[#775d68] sm:text-3xl">
+      <div className="flex flex-wrap items-baseline gap-x-2 text-left font-serif text-2xl font-semibold leading-tight text-main sm:text-3xl">
         <span>Come</span>
         <span className="inline-flex">
           <ExplorationRotatingText delay={0} y={10} duration={3000} text={text} />

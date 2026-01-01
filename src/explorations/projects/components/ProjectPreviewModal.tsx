@@ -1,13 +1,15 @@
 import { useEffect, useRef } from 'react';
 import type { ProjectItem } from '@/explorations/projects/types';
 
+
+
 interface ProjectPreviewModalProps {
   open: boolean;
   project: ProjectItem | null;
   onClose: () => void;
 }
 
-export function ProjectPreviewModal({ open, project, onClose }: ProjectPreviewModalProps) {
+export function ProjectPreviewModal({ open, project, onClose,  }: ProjectPreviewModalProps) {
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
@@ -58,23 +60,9 @@ export function ProjectPreviewModal({ open, project, onClose }: ProjectPreviewMo
             className="mb-3 h-auto w-full rounded-md object-cover"
           />
           <p className="text-sm text-gray-700">{project.previewDescription}</p>
-
-          {(project.projectUrl ) && (
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.projectUrl && (
-                <a
-                  href={project.projectUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center rounded bg-gray-900 px-3 py-1 text-sm font-medium text-white hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                >
-                  View Full Page
-                </a>
-              )}
-             
-            
-            
-            </div>
+{(project.projectUrl ) && ( <div className="mt-4 flex flex-wrap gap-2"> {project.projectUrl && ( <a href={project.projectUrl} target="_blank" rel="noreferrer" className="inline-flex items-center rounded bg-gray-900 px-3 py-1 text-sm font-medium text-white hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" > View Full Page </a> )}
+        
+        </div>
           )}
         </div>
       </div>

@@ -12,4 +12,5 @@ export interface ProjectItem {
   fullContent?: string;
   projectUrl?: string;
   [key: string]: unknown;
+  tags?: string[];
 }

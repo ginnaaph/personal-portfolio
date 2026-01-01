@@ -1,8 +1,8 @@
 import { Navigation } from "../../components/ui/navigation/Navigation"
 import { ExplorationHeader } from "../components/ExplorationsHeader"
 import { Footer } from "../../home/components/Footer"
+import  { projects } from "../../home/data/projectData"
 import { ProjectGrid } from "../projects/components/ProjectGrid"
-import { projects } from "@/home/data/projectData"
 
 
 export const ExplorationsPg = () => {

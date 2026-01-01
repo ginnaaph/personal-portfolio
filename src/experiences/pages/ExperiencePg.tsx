@@ -1,5 +1,5 @@
 import { Navigation } from "@/components/ui/navigation/Navigation"
-import ExperienceHeader from "@/experiences/components/ExperienceHeader"
+import {ExperienceHeader} from "@/experiences/components/ExperienceHeader"
 import ExperienceTimeline from "@/experiences/components/ExperienceTimeline"
 import { experienceData } from "@/data/experienceData"
 import { Footer } from "@/home/components/Footer"

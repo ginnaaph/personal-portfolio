@@ -60,7 +60,7 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
               onChange={(e) => setData({ ...data, name: e.target.value })}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
-              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
+              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-main"
               placeholder="Your name"
             />
             {errors.name && (
@@ -83,7 +83,7 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
               onChange={(e) => setData({ ...data, email: e.target.value })}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
-              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
+              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-main"
               placeholder="you@example.com"
             />
             {errors.email && (
@@ -106,7 +106,7 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
               onChange={(e) => setData({ ...data, message: e.target.value })}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
-              className="mt-1 w-full resize-y rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
+              className="mt-1 w-full resize-y rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-main"
               placeholder="How can I help?"
             />
             {errors.message && (

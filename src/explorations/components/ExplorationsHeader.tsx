@@ -1,5 +1,5 @@
 import { IntroductionBlurb } from "./IntroductionBlurb"
-import { IconStack } from "./IconStacks"
+// import { IconStack } from "./IconStacks"
 
 export const ExplorationHeader = () => {
   return (
@@ -11,7 +11,7 @@ export const ExplorationHeader = () => {
         I’m always looking for new ways to bring ideas to life.
       </p>
 
-      <div className="pt-2">
+      {/* <div className="pt-2">
         <div className="flex items-center gap-2">
           <span className="text-base font-semibold text-main">Tech Stack:</span>
           <IconStack />
@@ -22,8 +22,8 @@ export const ExplorationHeader = () => {
           <li>💻 Coding projects built using TailwindCSS, Vite, React, Electron, JavaScript, and Python.</li>
           <li>🎨 Digital designs brought to life with Procreate and Adobe Illustrator.</li>
           <li>👩🏻‍🍳 Baking recipes I tried out.</li>
-        </ul>
-      </div>
+        </ul> */}
+      {/* </div> */}
     </div>
   )
 }

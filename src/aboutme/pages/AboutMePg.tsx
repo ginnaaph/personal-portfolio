@@ -1,5 +1,5 @@
-import { Navigation } from "../components/ui/navigation/Navigation";
-import {Footer } from "../home/components/Footer";
+import { Navigation } from "../../components/ui/navigation/Navigation";
+import {Footer } from "../../home/components/Footer";
 
 export const AboutMePg = () => {
     return (

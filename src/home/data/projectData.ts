@@ -15,9 +15,10 @@ export const projects: ProjectItem[] = [
     title: 'personal portfolio ',
     category: 'programming',
     image: portfolio,
-    previewDescription: 'Personal portfolio built with React,TypeScript, Vite and TailwindCSS.',
+    previewDescription: "This site is a production project I use to share my learning journey. It’s a place where I experiment, build, reflect, and refine as I grow both creatively and technically.",
     slug: 'personal-portfolio',
-    date: '2025-01-15',
+    date: '2025-12-15',
+    
     
   },
   {
@@ -44,7 +45,8 @@ export const projects: ProjectItem[] = [
     title: 'purrfect day ',
     category: 'programming',
     image: purrFectDay,
-    previewDescription: 'a gamified productivity app featuring a virtual cat companion.',
+    previewDescription: "Purrfect Day is an ongoing personal project that continues to evolve as I learn. It’s been iterated on many times, shaped by new ideas, refactors, and lessons along the way.",
+
     slug: 'purrfect-day',
     projectUrl: '/projects/p-004',
     date: '2024-12-10'

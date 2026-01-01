@@ -1,4 +1,5 @@
-export default function ExperienceHeader() {
+import { DLResumeBttn } from "@/components/ui/DLResumeBttn"
+export  const ExperienceHeader = () => {
   return (
     <header className="px-2">
       <h1>
@@ -10,6 +11,8 @@ export default function ExperienceHeader() {
         much. This page shares the professional roles where I’ve applied that same mindset: asking
         questions, refining systems, and building better ways of working alongside thoughtful teams.
       </p>
+
+    <DLResumeBttn />
     </header>
   )
 }

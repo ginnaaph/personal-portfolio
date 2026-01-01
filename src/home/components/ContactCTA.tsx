@@ -7,8 +7,8 @@ export type ContactCTAProps = {
 }
 
 export function ContactCTA({
-  title = "Let’s work together",
-  blurb = "Have a project in mind or just want to say hi? I’d love to hear from you.",
+  title = "Thoughts? Questions? Ideas?",
+  blurb = "If something here sparked a thought—or you’re just curious—feel free to reach out.",
 }: ContactCTAProps) {
   const navigate = useNavigate()
 
@@ -23,7 +23,7 @@ export function ContactCTA({
 
         <div className="mt-6">
           <Button onClick={() => navigate("/contact")}>
-            Contact Me
+            Share a thought
           </Button>
         </div>
       </div>
