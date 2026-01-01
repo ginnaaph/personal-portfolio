@@ -1,47 +1,58 @@
-import type { ExperienceItem } from "@/experiences/types";
+import type { ExperienceItem } from "@/experiences/types"
 
 export default function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
   return (
-    <section aria-label="Experience timeline" className="relative mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
+    <section aria-label="Experience timeline" className="relative w-full">
       {/* Vertical line (mobile: left) */}
-      <div className="md:hidden pointer-events-none absolute inset-y-0 left-4 w-px bg-gray-200 dark:bg-gray-700" />
+      <div className="pointer-events-none absolute inset-y-0 left-4 w-px bg-white/70 md:hidden" />
       {/* Vertical line (desktop: center) */}
-      <div className="hidden md:block pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 transform w-px bg-gray-200 dark:bg-gray-700" />
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/70 md:block" />
 
-      <ol className="relative space-y-12 md:space-y-16">
+      <ol className="relative space-y-10 md:space-y-14">
         {items.map((item, idx) => {
-          const isEven = idx % 2 === 0;
+          const isEven = idx % 2 === 0
           const sideClass = isEven
             ? "md:col-start-1 md:pr-10 md:text-right"
-            : "md:col-start-2 md:pl-10 md:text-left";
+            : "md:col-start-2 md:pl-10 md:text-left"
 
           return (
-            <li key={`${item.company}-${item.title}-${idx}`} className="relative md:grid md:grid-cols-2 md:gap-8">
+            <li
+              key={`${item.company}-${item.title}-${idx}`}
+              className="relative md:grid md:grid-cols-2 md:gap-8"
+            >
               {/* Dot markers */}
-              <span className="md:hidden absolute left-4 top-4 -ml-1.5 h-3 w-3 rounded-full bg-accent-2 ring-4 ring-white dark:ring-gray-900" />
-              <span className="hidden md:block absolute left-1/2 top-4 -ml-1.5 h-3 w-3 -translate-x-1/2 transform rounded-full bg-accent-2 ring-4 ring-white dark:ring-gray-900" />
+              <span className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-accent-2 ring-4 ring-[#DAD0DC] md:hidden" />
+              <span className="absolute left-1/2 top-6 hidden h-3 w-3 -translate-x-1/2 rounded-full bg-accent-2 ring-4 ring-[#DAD0DC] md:block" />
 
-              <div className={`pl-4 md:pl-0 ${sideClass} bg-accent-2 gap-2 rounded-lg`}>
-                <article className="inline-block rounded border border-accent-2 bg-[#DAD0DC] p-6 shadow-sm backdrop-blur-sm transition-colors dark:border-accent-2 dark:bg-gray-900/40">
-                  <header className="mb-2">
-                    <div className="text-xl font-semibold  font-montserrat leading-6 text-gray-900 dark:text-gray-100">
+              {/* Column content */}
+              <div className={`pl-10 md:pl-0 ${sideClass}`}>
+                <article className="w-full rounded-2xl border border-neutral-200 bg-white/70 p-5 shadow-sm sm:p-6">
+                  <header className="mb-3">
+                    <h3>
                       {item.title}
-                    </div>
-                    <div className="mt-1 text-md text-main dark:text-[#DAD0DC] font-['noticia_text']">
-                      {item.company}
-                      {item.location ? <span className="ml-2 text-main">• {item.location}</span> : null}
-                    </div>
-                    <p className="mt-1 text-xs uppercase tracking-wide dark:text-[#DAD0DC]">
+                    </h3>
+
+                    <p className="mt-1 text-sm text-main">
+                      <span className="font-medium">{item.company}</span>
+                      {item.location ? (
+                        <span className="ml-2 text-main/80">• {item.location}</span>
+                      ) : null}
+                    </p>
+
+                    <p className="mt-1 text-xs uppercase tracking-wide text-main/70">
                       {item.startDate} — {item.endDate}
                     </p>
                   </header>
-                  <p className="text-sm leading-6  dark:text-gray-300">{item.description}</p>
+
+                  <p className="text-sm leading-relaxed text-main">
+                    {item.description}
+                  </p>
                 </article>
               </div>
             </li>
-          );
+          )
         })}
       </ol>
     </section>
-  );
+  )
 }

@@ -1,41 +1,40 @@
 import type { ComponentType } from "react"
-import { SiJavascript, SiTypescript, SiReact, SiVite, SiTailwindcss, SiPython, SiHtml5, SiCss3 } from "react-icons/si"
-
-const IconBrandJavascript = SiJavascript;
-const IconBrandTypescript = SiTypescript;
-const IconBrandReact = SiReact;
-const IconBrandVite = SiVite;
-const IconBrandTailwind = SiTailwindcss;
-const IconBrandPython = SiPython;
-const IconBrandHtml5 = SiHtml5;
-const IconBrandCss3 = SiCss3;
-
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si"
 
 export type IconStackItem = {
-    icon: ComponentType<{ size?: number; color?: string; title?: string }>;
-   
-    color?: string;
-};
+  icon: ComponentType<{ size?: number; color?: string; title?: string }>
+  label: string
+  color?: string
+}
 
 const iconTechStacks: IconStackItem[] = [
-    { icon: IconBrandJavascript, color: "#F7DF1E" },
-    { icon: IconBrandTypescript, color: "#3178C6" },
-    { icon: IconBrandReact, color: "#61DBFB" },
-    { icon: IconBrandVite, color: "#646CFF" },
-    { icon: IconBrandTailwind, color: "#38B2AC" },
-    { icon: IconBrandPython, color: "#3776AB" },
-    { icon: IconBrandHtml5, color: "#E34F26" },
-    { icon: IconBrandCss3, color: "#1572B6" },
-];
+  { icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+  { icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
+  { icon: SiReact, label: "React", color: "#61DBFB" },
+  { icon: SiVite, label: "Vite", color: "#646CFF" },
+  { icon: SiTailwindcss, label: "Tailwind CSS", color: "#38B2AC" },
+  { icon: SiPython, label: "Python", color: "#3776AB" },
+  { icon: SiHtml5, label: "HTML5", color: "#E34F26" },
+  { icon: SiCss3, label: "CSS3", color: "#1572B6" },
+]
 
 export const IconStack = () => {
-    return (
-        <div className="w-full flex items-center justify-center gap-2 md:gap-4 py-2">
-            {iconTechStacks.map(({ icon: Icon, color }) => (
-                <div key={color} className="flex flex-col items-center select-none">
-                    <Icon size={18} color={color} />
-                </div>
-            ))}
-        </div>
-    )
+  return (
+    <div className="flex flex-wrap items-center gap-2 py-2">
+      {iconTechStacks.map(({ icon: Icon, color, label }) => (
+        <span key={label} className="select-none" aria-label={label} title={label}>
+          <Icon size={18} color={color} />
+        </span>
+      ))}
+    </div>
+  )
 }

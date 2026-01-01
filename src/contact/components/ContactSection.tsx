@@ -28,12 +28,17 @@ export function ContactSection({
   socials = defaultSocials,
 }: ContactSectionProps) {
   return (
-    <section className="w-full px-4 md:px-6 py-12 bg-[#DAD0DC]">
+    <section className="w-full bg-[#DAD0DC] px-4 py-10 sm:px-6 sm:py-14">
       <div className="mx-auto max-w-3xl text-center">
-        <div className="text-4xl md:text-4xl  font-montserrat tracking-tight">{title}</div>
-        <p className="mt-3 text-base md:text-lg font-['noticia_text'] ">{subtitle}</p>
+        <h2>
+          {title}
+        </h2>
 
-        <div className="mt-6 flex items-center justify-center gap-4 md:gap-6">
+        <p className="mt-3 text-base leading-relaxed text-neutral-700">
+          {subtitle}
+        </p>
+
+        <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6">
           {socials.map(({ label, href, icon: Icon }) => (
             <a
               key={label}
@@ -41,9 +46,15 @@ export function ContactSection({
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={label}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-white border bg-main border-main hover:border-main hover:bg-accent-2 transition"
+              className="
+                inline-flex h-11 w-11 items-center justify-center rounded-full
+                border border-main bg-main text-white
+                transition
+                hover:bg-accent-2 hover:text-main
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-main
+              "
             >
-              {Icon ? <Icon size={22} title={label} /> : <span className="text-sm">{label}</span>}
+              {Icon ? <Icon size={20} title={label} /> : <span className="text-sm">{label}</span>}
             </a>
           ))}
         </div>
@@ -53,3 +64,4 @@ export function ContactSection({
 }
 
 export default ContactSection
+

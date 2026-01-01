@@ -44,11 +44,14 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto px-4 md:px-0">
-      <div className="rounded-2xl border border-neutral-200 bg-white p-6 md:p-8 shadow-sm mb-20">
-        <div className="grid gap-4 md:gap-5">
+    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-2xl">
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="grid gap-4 sm:gap-5">
+          {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-neutral-800">Name</label>
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-900">
+              Name
+            </label>
             <input
               id="name"
               name="name"
@@ -56,13 +59,22 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
               value={data.name}
               onChange={(e) => setData({ ...data, name: e.target.value })}
               aria-invalid={!!errors.name}
-              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-md outline-none focus:ring-2 focus:ring-neutral-800"
+              aria-describedby={errors.name ? "name-error" : undefined}
+              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
               placeholder="Your name"
             />
-            {errors.name && <p className="mt-1 text-sm text-red-300">{errors.name}</p>}
+            {errors.name && (
+              <p id="name-error" role="alert" className="mt-1 text-sm text-red-600">
+                {errors.name}
+              </p>
+            )}
           </div>
+
+          {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-md  text-neutral-800">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-neutral-900">
+              Email
+            </label>
             <input
               id="email"
               name="email"
@@ -70,36 +82,51 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
               value={data.email}
               onChange={(e) => setData({ ...data, email: e.target.value })}
               aria-invalid={!!errors.email}
-              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-md outline-none focus:ring-2 focus:ring-neutral-800"
+              aria-describedby={errors.email ? "email-error" : undefined}
+              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
               placeholder="you@example.com"
             />
-            {errors.email && <p className="mt-1 text-sm text-red-300">{errors.email}</p>}
+            {errors.email && (
+              <p id="email-error" role="alert" className="mt-1 text-sm text-red-600">
+                {errors.email}
+              </p>
+            )}
           </div>
 
+          {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-md  text-neutral-800">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-neutral-900">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
-              rows={5}
+              rows={6}
               value={data.message}
               onChange={(e) => setData({ ...data, message: e.target.value })}
               aria-invalid={!!errors.message}
-              className="mt-1 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800"
+              aria-describedby={errors.message ? "message-error" : undefined}
+              className="mt-1 w-full resize-y rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[#775d68]"
               placeholder="How can I help?"
             />
-            {errors.message && <p className="mt-1 text-sm text-red-300">{errors.message}</p>}
+            {errors.message && (
+              <p id="message-error" role="alert" className="mt-1 text-sm text-red-600">
+                {errors.message}
+              </p>
+            )}
           </div>
 
-          <div className="flex items-center gap-3">
+          {/* Actions */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button type="submit" disabled={status === "submitting"}>
               {status === "submitting" ? "Sending…" : submitLabel}
             </Button>
+
             {status === "success" && (
-              <span className="text-sm text-green-200">Message sent! I’ll get back to you soon.</span>
+              <span className="text-sm text-emerald-700">Message sent! I’ll get back to you soon.</span>
             )}
             {status === "error" && (
-              <span className="text-sm text-red-400">Something went wrong. Please try again.</span>
+              <span className="text-sm text-red-700">Something went wrong. Please try again.</span>
             )}
           </div>
         </div>
