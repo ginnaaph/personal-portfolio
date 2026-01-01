@@ -3,8 +3,6 @@ import { ExplorationHeader } from "../components/ExplorationsHeader"
 import { Footer } from "../../home/components/Footer"
 import  { projects } from "../../home/data/projectData"
 import { ProjectGrid } from "../projects/components/ProjectGrid"
-
-
 export const ExplorationsPg = () => {
   return (
     <div id="explorations" className="min-h-screen w-full">
