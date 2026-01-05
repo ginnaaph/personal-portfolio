@@ -8,7 +8,7 @@ export type ContactCTAProps = {
 
 export function ContactCTA({
   title = "Thoughts? Questions? Ideas?",
-  blurb = "If something here sparked a thought—or you’re just curious—feel free to reach out.",
+  blurb = "If something here sparked a thought or you’re just curious, feel free to reach out.",
 }: ContactCTAProps) {
   const navigate = useNavigate()
 
