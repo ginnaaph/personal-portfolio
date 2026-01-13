@@ -17,7 +17,7 @@ export const ExplorationsPg = () => {
             </section>
 
             {/* Main content */}
-            <section className="md:col-span-9">
+            <section className="md:col-span-9 bg-white ">
               <ProjectGrid projects={projects} />
             </section>
           </div>

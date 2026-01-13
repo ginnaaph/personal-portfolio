@@ -2,7 +2,7 @@ import type { ExperienceItem } from "@/experiences/types"
 
 export default function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
   return (
-    <section aria-label="Experience timeline" className="relative w-full">
+    <section aria-label="Experience timeline" className="relative w-full bg-main/50 p-10">
       {/* Vertical line (mobile: left) */}
       <div className="pointer-events-none absolute inset-y-0 left-4 w-px bg-white/70 md:hidden" />
       {/* Vertical line (desktop: center) */}
