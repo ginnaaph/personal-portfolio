@@ -4,18 +4,18 @@ import { projects } from "../../home/data/projectData"
 import { ExplorationSideBar } from "../components/ExplorationSideBar"
 import { ProjectGrid } from "../projects/components/ProjectGrid"
 
-export const ProgrammingPg = () => {
-  const categoryProjects = projects.filter((project) => project.category === "programming")
+export const BakingPg = () => {
+  const categoryProjects = projects.filter((project) => project.category === "baking")
   return (
-    <div id="programming" className="min-h-screen w-full">
+    <div id="baking" className="min-h-screen w-full">
       <Navigation />
 
       <main className="w-full bg-[#DAD0DC]">
         <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:py-10 lg:px-8">
           <section className="mb-8 rounded-2xl bg-white p-6 text-center shadow-sm md:p-8">
-            <h1 className="text-2xl font-semibold text-main md:text-3xl">Programming</h1>
+            <h1 className="text-2xl font-semibold text-main md:text-3xl">Baking</h1>
             <p className="mt-2 text-sm text-neutral-700 md:text-base">
-              Experiments and builds that mix UI craft, product thinking, and code.
+              Recipes, experiments, and small wins from the kitchen.
             </p>
           </section>
 
