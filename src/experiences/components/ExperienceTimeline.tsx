@@ -1,8 +1,17 @@
 import type { ExperienceItem } from "@/experiences/types"
+import { cn } from "@/lib/utils"
 
-export default function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
+type ExperienceTimelineProps = {
+  items: ExperienceItem[]
+  className?: string
+}
+
+export default function ExperienceTimeline({ items, className }: ExperienceTimelineProps) {
   return (
-    <section aria-label="Experience timeline" className="relative w-full bg-main/50 p-10">
+    <section
+      aria-label="Experience timeline"
+      className={cn("relative w-full", className)}
+    >
       {/* Vertical line (mobile: left) */}
       <div className="pointer-events-none absolute inset-y-0 left-4 w-px bg-white/70 md:hidden" />
       {/* Vertical line (desktop: center) */}
@@ -44,7 +53,7 @@ export default function ExperienceTimeline({ items }: { items: ExperienceItem[] 
                     </p>
                   </header>
 
-                  <p className="text-sm leading-relaxed text-main">
+                  <p className="text-sm leading-relaxed ">
                     {item.description}
                   </p>
                 </article>

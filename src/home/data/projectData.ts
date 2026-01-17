@@ -48,7 +48,7 @@ export const projects: ProjectItem[] = [
     previewDescription: "Purrfect Day is an ongoing personal project that continues to evolve as I learn. It’s been iterated on many times, shaped by new ideas, refactors, and lessons along the way.",
 
     slug: 'purrfect-day',
-    projectUrl: '/projects/p-004',
+    projectUrl: '/explorations/programming/purrfect-day',
     date: '2024-12-10'
   },
   {

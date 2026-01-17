@@ -11,10 +11,13 @@ export const Hero = () => {
                 <div className=" text-3xl italic  ">  Hi, there! </div>
               <TypingAnimation className="text-5xl font-bold  text-accent-2 font-monserrat"> I&apos;m Gina!  </TypingAnimation>
            <p className="text-xl mt-1"> a curious builder with a love for solving problems and creating meaningful things, from code to art.</p>
+           <p className="text-xs italic"> This portfolio is actively being developed, new explorations and sections as a I continue building and learning. </p>
               <div className="mt-10 items-center "> 
            
                 <ViewProjectsBtn />
+  
               </div>
+              
                 </div>
                     </div>
                    

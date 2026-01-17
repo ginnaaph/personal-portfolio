@@ -9,6 +9,7 @@ import { AboutMePg } from "./aboutme/pages/AboutMePg"
 import { ProgrammingPg } from "./explorations/pages/ProgrammingPg"
 import { BakingPg } from "./explorations/pages/BakingPg"
 import { ArtPg } from "./explorations/pages/ArtPg"
+import { ExplorationPostPg } from "./explorations/pages/ExplorationPostPg"
 
 
 const AdminPage = import.meta.env.DEV
@@ -27,6 +28,7 @@ export const App = () => {
         <Route path="/explorations/programming" element={<ProgrammingPg />} />
         <Route path="/explorations/baking" element={<BakingPg />} />
         <Route path="/explorations/art" element={<ArtPg />} />
+        <Route path="/explorations/:category/:slug" element={<ExplorationPostPg />} />
 
         {/* Dev-only admin */}
         {import.meta.env.DEV && AdminPage ? (

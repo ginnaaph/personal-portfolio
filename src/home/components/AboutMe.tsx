@@ -19,12 +19,14 @@ export const AboutMe = () => {
 
           {/* content */}
           <div className="w-full max-w-2xl text-center sm:text-left">
-            <h2>
-              A little about me,{" "}
-              <span className="italic text-[#7e738E]">
-                the curious mind behind the page...
-              </span>
-            </h2>
+           
+              <h2 className="text-2xl font-semibold text-main md:text-3xl">
+                A little about me,{" "}
+                <span className="italic text-[#7e738E]">
+                  the curious mind behind the page...
+                </span>
+              </h2>
+
 
             <div className="mt-4 space-y-4">
               <p className="leading-relaxed">
@@ -39,7 +41,7 @@ export const AboutMe = () => {
                 Whether it's refining a process, designing a solution, or experimenting
                 with something new, I'm always asking "How does this work?" and "How can
                 we make it better?" Here, you'll find the projects I've created along the
-                way—each one is a small chapter in my journey of learning, building, and
+                way, each one is a small chapter in my journey of learning, building, and
                 growing through curiosity.
               </p>
             </div>

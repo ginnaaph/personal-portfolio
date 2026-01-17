@@ -3,11 +3,11 @@ import { IntroductionBlurb } from "./IntroductionBlurb"
 
 export const ExplorationHeader = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-1">
       <IntroductionBlurb />
 
-      <p className="text-sm leading-relaxed text-neutral-700">
-        Each project is a reflection of my curiosity — whether I'm sketching by hand or writing code,
+      <p className="text-sm leading-relaxed ">
+        Each project is a reflection of my curiosity, whether I'm sketching by hand or writing code,
         I’m always looking for new ways to bring ideas to life.
       </p>
 

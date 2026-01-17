@@ -6,12 +6,20 @@ import {
   ListboxItem,
   ListboxItemIndicator,
 } from "@/components/ui/list-box"
-import type { Category } from "@/explorations/types"
+type Category = "programming" | "baking" | "art"
 
-const categories: Category[] = ["programming", "baking", "art"]
+type CategoryOption = {
+  value: "all" | Category
+  label: string
+  to: string
+}
 
-const formatLabel = (category: Category) =>
-  category.charAt(0).toUpperCase() + category.slice(1)
+const categories: CategoryOption[] = [
+  { value: "all", label: "All categories", to: "/explorations" },
+  { value: "programming", label: "Programming", to: "/explorations/programming" },
+  { value: "baking", label: "Baking", to: "/explorations/baking" },
+  { value: "art", label: "Art", to: "/explorations/art" },
+]
 
 export const CategoriesListBox = () => {
   const location = useLocation()
@@ -19,8 +27,10 @@ export const CategoriesListBox = () => {
 
   const activeCategory =
     categories.find((category) =>
-      location.pathname.startsWith(`/explorations/${category}`),
-    ) ?? null
+      category.value === "all"
+        ? location.pathname === "/explorations"
+        : location.pathname.startsWith(category.to),
+    )?.value ?? null
 
   return (
     <Listbox
@@ -28,15 +38,16 @@ export const CategoriesListBox = () => {
       value={activeCategory ?? undefined}
       onValueChange={(next) => {
         if (!next) return
-        navigate(`/explorations/${next}`)
+        const target = categories.find((category) => category.value === next)
+        if (target) navigate(target.to)
       }}
       className="w-full"
     >
       <ListboxGroup>
         <ListboxGroupLabel>Categories</ListboxGroupLabel>
         {categories.map((category) => (
-          <ListboxItem key={category} value={category} textValue={category}>
-            <span className="font-medium text-main">{formatLabel(category)}</span>
+          <ListboxItem key={category.value} value={category.value}>
+            <span className="font-medium text-main">{category.label}</span>
             <ListboxItemIndicator className="text-main" />
           </ListboxItem>
         ))}

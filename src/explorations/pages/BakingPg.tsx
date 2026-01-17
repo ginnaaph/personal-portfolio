@@ -7,10 +7,10 @@ import { ProjectGrid } from "../projects/components/ProjectGrid"
 export const BakingPg = () => {
   const categoryProjects = projects.filter((project) => project.category === "baking")
   return (
-    <div id="baking" className="min-h-screen w-full">
+    <div id="baking" className="flex min-h-screen w-full flex-col">
       <Navigation />
 
-      <main className="w-full bg-[#DAD0DC]">
+      <main className="w-full flex-1 bg-[#DAD0DC]">
         <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:py-10 lg:px-8">
           <section className="mb-8 rounded-2xl bg-white p-6 text-center shadow-sm md:p-8">
             <h1 className="text-2xl font-semibold text-main md:text-3xl">Baking</h1>
@@ -20,7 +20,10 @@ export const BakingPg = () => {
           </section>
 
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
-            <ExplorationSideBar className="w-full md:sticky md:top-24 md:max-h-[calc(100vh-6rem)] md:w-64 md:shrink-0 md:overflow-auto lg:w-72" />
+            <ExplorationSideBar
+              variant="baking"
+              className="w-full md:sticky md:top-24 md:max-h-[calc(100vh-6rem)] md:w-64 md:shrink-0 md:overflow-auto lg:w-72"
+            />
             <section className="flex-1 rounded-2xl bg-white p-4 shadow-sm md:p-6">
               <ProjectGrid projects={categoryProjects} showFilters={false} />
             </section>
