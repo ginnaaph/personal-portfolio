@@ -3,9 +3,9 @@ import { Blockquote } from "flowbite-react";
 export const AlbertEinsteinQuote = () => {
     return (
         <>
-        <Blockquote className="text-3xl text-accent-2 italic mt-6 text-center">
+        <Blockquote className="text-3xl text-secondary italic mt-6 text-center">
               <svg
-        className="mb-3 h-8 w-8 text-accent-2 dark:text-[#dad0dc] scale-x-[-1] "
+        className="mb-3 h-8 w-8 text-secondary dark:text-secondary scale-x-[-1] "
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -15,7 +15,7 @@ export const AlbertEinsteinQuote = () => {
       </svg>
       "Curiosity and creativity are intelligence having fun."
       <svg
-  className="mt-2 h-8 w-8 text-accent-2 dark:text-[#dad0dc] ml-auto"
+  className="mt-2 h-8 w-8 text-secondary dark:text-secondary ml-auto"
   aria-hidden="true"
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
@@ -25,7 +25,7 @@ export const AlbertEinsteinQuote = () => {
 </svg>
      
         </Blockquote>
-        <div className="text-right text-xl mt-2 mr-5">- Albert Einstein</div>
+        <div className="text-right text-secondary text-xl mt-2 mr-5">- Albert Einstein</div>
         </>
     )
 }

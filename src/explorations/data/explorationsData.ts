@@ -10,9 +10,8 @@ export const explorationsData: ExplorationPost[] = [
     slug: "purrfect-day",
     title: "Purrfect Day",
     category: "programming",
-    summary:
-      "A learning-driven productivity app project where I keep iterating as my skills grow.",
-    heroImage: { src: purrFectDay, alt: "Purrfect Day dashboard preview" },
+    summary: "Test post for previewing how exploration blogs will look.",
+ 
     tags: ["ui", "react", "prototype"],
     createdAt: "2025-12-15T00:00:00.000Z",
     sections: [
@@ -20,13 +19,13 @@ export const explorationsData: ExplorationPost[] = [
         type: "text",
         heading: "Overview",
         body:
-          "Purrfect Day is a cozy, cat-themed productivity and wellness app. It blends Pomodoro, habit tracking, and gamification so daily tasks feel lighter and more rewarding.\n\nIt is built for students, professionals, and anyone who wants a playful way to stay on track. The core flow is simple: open the dashboard, pick tasks, start a Pomodoro, earn rewards, and customize the cat room.\n\nThe app includes task management, a Pomodoro timer, a daily dashboard, wellness logs with streaks, goals and achievements, journaling, and a reward shop. The stack is React, TypeScript, Vite, and Electron with React Query, Zustand, React Router, Sonner, and dnd-kit.\n\nFuture ideas include social features, a mobile version, calendar and device integrations, and an AI helper for recommendations and automation.",
+          "Test post for previewing how exploration blogs will look. This sample entry lets me experiment with layout, spacing, and section structure while the real case study is still in progress.\n\nPurrfect Day is a cozy, cat-themed productivity and wellness app. It blends Pomodoro, habit tracking, and gamification so daily tasks feel lighter and more rewarding.\n\nIt is built for students, professionals, and anyone who wants a playful way to stay on track. The core flow is simple: open the dashboard, pick tasks, start a Pomodoro, earn rewards, and customize the cat room.\n\nThe app includes task management, a Pomodoro timer, a daily dashboard, wellness logs with streaks, goals and achievements, journaling, and a reward shop. The stack is React, TypeScript, Vite, and Electron with React Query, Zustand, React Router, Sonner, and dnd-kit.\n\nFuture ideas include social features, a mobile version, calendar and device integrations, and an AI helper for recommendations and automation.",
       },
       {
         type: "image",
-        heading: "Visual direction",
+        heading: "Version 2, previously called Catmodorro",
         src: purrFectDay,
-        alt: "Purrfect Day dashboard preview",
+        alt: "Version 2, previously called Catmodorro",
         caption: "Early UI exploration for the daily overview screen.",
       },
       {

@@ -6,7 +6,7 @@ export const badgeVariants = cva(
     variants: {
       variant: {
         default:
-          "border-transparent bg-main text-white [a&]:hover:bg-main/90",
+          "border-transparent bg-accent-4 text-white [a&]:hover:bg-accent-4/90",
         secondary:
           "border-transparent bg-white text-main [a&]:hover:bg-white/90",
         destructive:

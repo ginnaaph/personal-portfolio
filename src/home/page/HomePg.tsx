@@ -11,7 +11,7 @@ export const HomePg = () => {
       <Hero />
       <AboutMe />
 
-      <section className="w-full bg-main px-4 py-10">
+      <section className="w-full bg-accent-1 px-4 py-15">
         <div className="mx-auto w-full max-w-5xl">
           <LatestCardSlider />
         </div>

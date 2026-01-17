@@ -34,7 +34,7 @@ export function ProjectPreviewSlider({ items, title = 'Latest Projects', ctaHref
   return (
 <section aria-label="Project previews" className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6">
       <div className="mb-4 flex items-center justify-between gap-2">
-         <h2 className="font-serif text-2xl font-semibold tracking-tight text-main sm:text-3xl">
+         <h2 className="font-serif text-2xl font-semibold tracking-tight text-secondary sm:text-3xl">
           {title}
         </h2>
         <div className="hidden items-center gap-2 sm:flex">

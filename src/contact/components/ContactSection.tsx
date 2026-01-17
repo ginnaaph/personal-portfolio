@@ -28,17 +28,17 @@ export function ContactSection({
   socials = defaultSocials,
 }: ContactSectionProps) {
   return (
-    <section className="w-full bg-[#DAD0DC] px-4 py-10 sm:px-6 sm:py-14">
+    <section className="w-full bg-secondary px-4 py-10 sm:px-6 sm:py-14">
       <div className="mx-auto max-w-3xl text-center">
         <h2>
           {title}
         </h2>
 
-        <p className="mt-3 text-base leading-relaxed text-neutral-700">
+        <p className="mt-3 text-accent-1 leading-relaxed">
           {subtitle}
         </p>
 
-        <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6">
+        <div className="mt-6 flex items-center justify-center gap-5 sm:gap-6">
           {socials.map(({ label, href, icon: Icon }) => (
             <a
               key={label}
@@ -48,9 +48,9 @@ export function ContactSection({
               aria-label={label}
               className="
                 inline-flex h-11 w-11 items-center justify-center rounded-full
-                border border-main bg-main text-white
+                border border-accent-2 bg-accent-2 text-white
                 transition
-                hover:bg-accent-2 hover:text-main
+                hover:bg-accent- hover:text-main
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-main
               "
             >

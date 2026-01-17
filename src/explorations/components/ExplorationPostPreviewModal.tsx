@@ -32,13 +32,13 @@ export function ExplorationPostPreviewModal({ open, post, onClose }: Exploration
 
       <div className="relative z-10 w-full max-w-2xl rounded-2xl bg-white shadow-xl ring-1 ring-black/10">
         <div className="flex items-center justify-between border-b px-4 py-3">
-          <h2 id={`preview-title-${post.id}`} className="text-lg font-semibold text-main">
+          <h3 id={`preview-title-${post.id}`} className="text-lg font-semibold text-main">
             {post.title}
-          </h2>
+          </h3>
           <button
             ref={closeBtnRef}
             onClick={onClose}
-            className="rounded px-3 py-1 text-sm font-medium text-neutral-700 hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="rounded px-3 py-1 text-sm font-medium text-accent-1 hover:bg-accent-1/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             Close
           </button>

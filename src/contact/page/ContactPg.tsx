@@ -8,7 +8,7 @@ export const ContactPg = () => {
     return (
         <div id="contact" className="flex flex-col items-center  min-h-screen justify-start">
             <Navigation />
-            <main className="w-full min-h-screen bg-[#DAD0DC]">
+            <main className="w-full min-h-screen bg-secondary">
                 <ContactSection />
                 <ContactForm />
             </main>

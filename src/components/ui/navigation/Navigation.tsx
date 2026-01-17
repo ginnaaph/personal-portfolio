@@ -75,7 +75,7 @@ export const Navigation = () => {
   const isGroupActive = (prefix: string) => pathname === prefix || pathname.startsWith(prefix + "/")
 
   return (
-    <header className="w-full bg-accent-2 text-white">
+    <header className="w-full bg-accent-1 text-white">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-2">
         <Link to="/" className="text-md uppercase tracking-wide">
           Gina Pham
@@ -96,7 +96,7 @@ export const Navigation = () => {
                         <Link
                           to={item.to}
                           className={cx(
-                            "px-3 py-2 text-md uppercase transition hover:text-accent90",
+                            "px-3 py-2 text-sm uppercase transition hover:text-accent/90",
                             active && "font-semibold underline underline-offset-8"
                           )}
                         >
@@ -111,7 +111,7 @@ export const Navigation = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cx(
-                    "px-3 py-2 text-md uppercase transition hover:text-accent90 bg-transparent",
+                    "px-3 py-2 text-sm uppercase transition hover:text-accent/90 bg-transparent",
                     isGroupActive(EXPLORATIONS_GROUP.activePrefix) && "font-semibold underline underline-offset-8"
                   )}
                 >
@@ -124,7 +124,7 @@ export const Navigation = () => {
                         <Link
                           to={item.to}
                           className={cx(
-                            "block rounded-md px-3 py-2 text-sm text-main transition hover:bg-accent-2/15",
+                            "block rounded-md px-3 py-2 text-sm text-accent-1 transition hover:bg-accent-2/15",
                             pathname === item.to && "bg-accent-2/20 "
                           )}
                         >
@@ -140,7 +140,7 @@ export const Navigation = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cx(
-                    "px-3 py-2 text-md uppercase transition hover:text-accent90 bg-transparent",
+                    "px-3 py-2 text-sm uppercase transition hover:text-accent90 bg-transparent",
                     isGroupActive(ABOUT_GROUP.activePrefix) || pathname === "/about-me" || pathname === "/experiences"
                       ? "font-semibold underline underline-offset-8"
                       : ""

@@ -14,7 +14,7 @@ export function ContactCTA({
 
   return (
     <section className="w-full px-4 py-10 sm:px-6 sm:py-14">
-      <div className="mx-auto max-w-3xl rounded-2xl border border-neutral-200 bg-[#DAD0DC] p-6 sm:p-8 text-center shadow-sm">
+      <div className="mx-auto max-w-3xl rounded-2xl border border-secondarybg-secondary p-6 sm:p-8 text-center shadow-sm">
         <h2>{title}</h2>
 
         <p className="mt-3 mx-auto max-w-xl leading-relaxed text-neutral-700">

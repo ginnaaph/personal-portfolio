@@ -23,10 +23,7 @@ export const ExplorationSideBar = ({ className, variant = "all" }: ExplorationSi
                     className="text-md"
                 />
                 <CategoriesListBox />
-                <div>
-                    <div className="text-sm font-medium text-neutral-600">Tech stack</div>
-                    <IconStack />
-                </div>
+               
                 {extraContent}
             </section>
         </aside>
@@ -39,13 +36,17 @@ function getSidebarExtraContent(variant: ExplorationSideBarProps["variant"]) {
     switch (variant) {
         case "programming":
             return (
-                <div className="text-xs text-neutral-500">
+                <div className="text-xs text-accent-1">
+                     <div>
+                    <div className="text-sm font-medium text-accent-1 py-4" >Tech stack</div>
+                    <IconStack />
+                </div>
                     {/* TODO: Add programming-specific sidebar content */}
                 </div>
             )
         case "baking":
             return (
-                <div className="text-xs text-neutral-500">
+                <div className="text-xs text-accent-1">
                     {/* TODO: Add baking-specific sidebar content */}
                 </div>
             )

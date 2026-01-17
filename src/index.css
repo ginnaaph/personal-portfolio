@@ -29,7 +29,7 @@ html, body {
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: #775d68;
+    color: #8897aa;
   }
 
   h2 {
@@ -38,7 +38,7 @@ html, body {
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.01em;
-    color: #775d68;
+    color: #cfbccf;
   }
 
   h3 {
@@ -46,7 +46,7 @@ html, body {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3;
-    color: #7e738e;
+    color: #8897aa;
   }
 }
 @layer base {
@@ -59,9 +59,12 @@ html, body {
   --font-display: 'Montserrat', sans-serif;
 }
 @theme{
-  --color-main: #775d68;
-  --color-accent: #dad0dc;
-  --color-accent-2: #7e738e;
+  --color-main: #bab0ca;
+  --color-secondary: #ece7eb;
+  --color-accent-1: #8897aa;
+  --color-accent-2: #cfbccf;
+  --color-accent-3: #ceb7c3;
+  --color-accent-4: #dfd0d7;
 
 }
 

@@ -5,7 +5,7 @@ import { WaveDivider } from '@/components/ui/WaveDivider'
 
 export const AboutMe = () => {
   return (
-    <section id="aboutme" className="relative bg-[#DAD0DC]">
+    <section id="aboutme" className="relative bg-accent-2">
       <WaveDivider color="white" flip={false} className="-mb-px" />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:px-8 sm:py-16">
@@ -20,9 +20,9 @@ export const AboutMe = () => {
           {/* content */}
           <div className="w-full max-w-2xl text-center sm:text-left">
            
-              <h2 className="text-2xl font-semibold text-main md:text-3xl">
+              <h2 className="text-2xl font-semibold text-secondary md:text-3xl">
                 A little about me,{" "}
-                <span className="italic text-[#7e738E]">
+                <span className="italic text-accent-1">
                   the curious mind behind the page...
                 </span>
               </h2>
@@ -62,7 +62,7 @@ export const AboutMe = () => {
         </div>
       </div>
 
-      <WaveDivider color="#775d68" flip={true} className="-mt-px" />
+      <WaveDivider color="var(--color-accent-1)" flip={true} className="-mt-px" />
     </section>
   )
 }
