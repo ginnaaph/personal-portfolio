@@ -93,7 +93,7 @@ function getCategoryBadgeClass(category: ProjectCategory) {
     case "baking":
       return "bg-accent-1 text-main border-accent-1/60"
     case "art":
-      return "bg-accent-2 text-main border-accent-2/60"
+      return "bg-option-1 text-main border-option-1/60"
     default:
       return ""
   }
