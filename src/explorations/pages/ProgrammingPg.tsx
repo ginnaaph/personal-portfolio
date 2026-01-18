@@ -10,7 +10,7 @@ export const ProgrammingPg = () => {
     <div id="programming" className="flex min-h-screen w-full flex-col">
       <Navigation />
 
-      <main className="w-full flex-1 bg-[#DAD0DC]">
+      <main className="w-full flex-1 bg-secondary">
         <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:py-10 lg:px-8">
 
           <section className="mb-8 rounded-2xl bg-white p-6 text-center shadow-sm md:p-8">

@@ -30,12 +30,12 @@ export default function ExperienceTimeline({ items, className }: ExperienceTimel
               className="relative md:grid md:grid-cols-2 md:gap-8"
             >
               {/* Dot markers */}
-              <span className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-accent-2 ring-4 ring-[#DAD0DC] md:hidden" />
-              <span className="absolute left-1/2 top-6 hidden h-3 w-3 -translate-x-1/2 rounded-full bg-accent-2 ring-4 ring-[#DAD0DC] md:block" />
+              <span className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-accent-4 ring-4 ring-secondary md:hidden" />
+              <span className="absolute left-1/2 top-6 hidden h-3 w-3 -translate-x-1/2 rounded-full bg-accent-4 ring-4 ring-secondary md:block" />
 
               {/* Column content */}
               <div className={`pl-10 md:pl-0 ${sideClass}`}>
-                <article className="w-full rounded-2xl border border-neutral-200 bg-white/70 p-5 shadow-sm sm:p-6">
+                <article className="w-full rounded-2xl border border-neutral-200 bg-secondary p-5 shadow-sm sm:p-6">
                   <header className="mb-3">
                     <h3>
                       {item.title}

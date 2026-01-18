@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProjectItem } from '../types';
+import type { ProjectItem, ProjectCategory } from '../types';
 import { ProjectPreviewModal } from './ProjectPreviewModal';
 import { Badge } from '@/components/ui/badge';
 
@@ -30,7 +30,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="px-3 py-2">
         <div className="flex flex-col items-start justify-center gap-2">
           <div className=" font-semibold text-lg text-accent-2 ">{project.title}</div>
-          <Badge variant="default" aria-label={`Category: ${project.category}`}>
+          <Badge
+            variant="secondary"
+            className={getCategoryBadgeClass(project.category)}
+            aria-label={`Category: ${project.category}`}
+          >
             {project.category}
           </Badge>
         </div>
@@ -39,4 +43,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <ProjectPreviewModal open={open} project={project} onClose={() => setOpen(false)} />
     </div>
   );
+}
+
+function getCategoryBadgeClass(category: ProjectCategory) {
+  switch (category) {
+    case "programming":
+      return "bg-accent-3 text-main border-accent-3/60"
+    case "baking":
+      return "bg-accent-1 text-main border-accent-1/60"
+    case "art":
+      return "bg-accent-2 text-main border-accent-2/60"
+    default:
+      return ""
+  }
 }

@@ -101,14 +101,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         <div className="flex mt-6">
         <div className="mr-10 flex  justify-end gap-2">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#DAD0DC] disabled:opacity-50"
+            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-secondary disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-main" />
           </button>
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#DAD0DC] disabled:opacity-50"
+            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-secondary disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
@@ -181,10 +181,10 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p className="text-base  text-main dark:text-[#DAD0DC]">
+              <motion.p className="text-base  text-main dark:text-secondary">
                 {card.category}
               </motion.p>
-              <motion.p className="mt-2 font-semibold text-main md:text-5xl dark:text-[#DAD0DC]">
+              <motion.p className="mt-2 font-semibold text-main md:text-5xl dark:text-secondary">
                 {card.title}
               </motion.p>
               <div className="py-7">{card.content}</div>
@@ -201,7 +201,7 @@ export const Card = ({
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-main/50 via-transparent to-transparent" />
         <div className="relative z-40 p-4 items-start justify-start flex flex-col">
          
-          <p className="text-left font-semibold text-balance text-main md:text-2xl bg-[#dad0dc]/70 mt-2 px-2 py-1 rounded-md">
+          <p className="text-left font-semibold text-balance text-main md:text-2xl bg-secondary/70 mt-2 px-2 py-1 rounded-md">
             {card.title}
           </p>
           <Badge variant="default" className="mt-2 "aria-label={`Category: ${card.category}`}>

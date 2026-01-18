@@ -84,7 +84,7 @@ export const ExplorationPostPg = () => {
     return (
       <div className="flex min-h-screen w-full flex-col">
         <Navigation />
-        <main className="flex w-full flex-1 items-center justify-center bg-[#DAD0DC] px-4 py-10">
+        <main className="flex w-full flex-1 items-center justify-center bg-secondary px-4 py-10">
           <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
             <h1 className="text-2xl font-semibold text-main">Exploration not found</h1>
             <p className="mt-2 text-sm text-neutral-700">
@@ -107,7 +107,7 @@ export const ExplorationPostPg = () => {
     <div className="flex min-h-screen w-full flex-col">
       <Navigation />
 
-      <main className="w-full flex-1 bg-[#DAD0DC]">
+      <main className="w-full flex-1 bg-secondary">
         <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 md:py-10 lg:px-8">
           <header className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
             <p className="text-xs uppercase tracking-wide text-main/70">{post.category}</p>

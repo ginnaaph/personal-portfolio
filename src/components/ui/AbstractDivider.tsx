@@ -8,7 +8,7 @@ type AbstractDividerProps = {
 }
 
 export const AbstractDivider = ({
-  color = "#DAD0DC",
+  color = "var(--color-secondary)",
   height = 64,
   flip = false,
   className,

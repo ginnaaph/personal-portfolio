@@ -32,7 +32,7 @@ export function ExplorationPostPreviewModal({ open, post, onClose }: Exploration
 
       <div className="relative z-10 w-full max-w-2xl rounded-2xl bg-white shadow-xl ring-1 ring-black/10">
         <div className="flex items-center justify-between border-b px-4 py-3">
-          <h3 id={`preview-title-${post.id}`} className="text-lg font-semibold text-main">
+          <h3 id={`preview-title-${post.id}`} className="font-semibold text-main">
             {post.title}
           </h3>
           <button

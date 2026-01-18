@@ -4,7 +4,7 @@ import { buttonVariants } from '@/components/ui/buttonVariants'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { ProjectPreviewModal } from '@/explorations/projects/components/ProjectPreviewModal'
-import type { ProjectItem } from '@/explorations/projects/types'
+import type { ProjectItem, ProjectCategory } from '@/explorations/projects/types'
 
 type Props = {
   item: ProjectItem
@@ -45,16 +45,26 @@ export function ProjectPreviewCard({ item, onClick, className }: Props) {
         />
       </button>
 
-      <CardHeader className="gap-1">
+      <CardHeader className="gap-2">
         <div className="flex items-center justify-between">
-          <Badge variant="secondary" aria-label={`Category: ${item.category}`}>{item.category}</Badge>
-          <span className="text-muted-foreground text-xs" aria-label={`Date: ${formatMonthYear(item.date)}`}>
+          <Badge
+            variant="secondary"
+            className={getCategoryBadgeClass(item.category)}
+            aria-label={`Category: ${item.category}`}
+          >
+            {item.category}
+          </Badge>
+          <span className="text-xs text-accent-4" aria-label={`Date: ${formatMonthYear(item.date)}`}>
             {formatMonthYear(item.date)}
           </span>
         </div>
-        <CardTitle className="text-base sm:text-lg line-clamp-1">{item.title}</CardTitle>
+        <CardTitle className="line-clamp-1 font-serif text-xl text-main sm:text-2xl">
+          {item.title}
+        </CardTitle>
         {item.previewDescription && (
-          <CardDescription className="line-clamp-2">{item.previewDescription}</CardDescription>
+          <CardDescription className="line-clamp-2 text-sm text-main/80">
+            {item.previewDescription}
+          </CardDescription>
         )}
       </CardHeader>
 
@@ -74,6 +84,19 @@ export function ProjectPreviewCard({ item, onClick, className }: Props) {
       </CardContent>
     </Card>
   )
-} 
+}
+
+function getCategoryBadgeClass(category: ProjectCategory) {
+  switch (category) {
+    case "programming":
+      return "bg-accent-3 text-main border-accent-3/60"
+    case "baking":
+      return "bg-accent-1 text-main border-accent-1/60"
+    case "art":
+      return "bg-accent-2 text-main border-accent-2/60"
+    default:
+      return ""
+  }
+}
 
 export default ProjectPreviewCard

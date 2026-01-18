@@ -22,9 +22,9 @@ export const ExplorationRotatingText = ({
       delay={delay}
       y={y}
       duration={duration}
-      className="ml-2  mt-1 text-4xl font-semibold italic text-[#7e738e] dark:text-[#dad0dc]"
-        text={text}
-        >
+      className="ml-2 mt-1 text-4xl font-semibold italic text-accent-4 dark:text-secondary"
+      text={text}
+    >
       <RotatingText />
     </RotatingTextContainer>
   );

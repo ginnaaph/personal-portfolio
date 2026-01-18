@@ -8,7 +8,7 @@ type WaveDividerProps = {
 }
 
 export const WaveDivider = ({
-  color = "#DAD0DC",
+  color = "var(--color-secondary)",
   height = 90,
   flip = false,
   className,
