@@ -13,7 +13,7 @@ export const ExplorationSideBar = ({ className, variant = "all" }: ExplorationSi
 
     return (
         <aside
-            className={cn("rounded-2xl bg-white p-4 shadow-sm md:p-6", className)}
+            className={cn("rounded-2xl bg-option-2 p-4 shadow-sm md:p-6", className)}
             aria-label="Exploration filters"
         >
             <section id="exploration-sidebar" className="flex flex-col gap-4">

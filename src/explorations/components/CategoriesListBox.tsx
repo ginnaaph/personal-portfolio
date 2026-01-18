@@ -47,8 +47,8 @@ export const CategoriesListBox = () => {
         <ListboxGroupLabel>Categories</ListboxGroupLabel>
         {categories.map((category) => (
           <ListboxItem key={category.value} value={category.value}>
-            <span className="font-medium text-main">{category.label}</span>
-            <ListboxItemIndicator className="text-main" />
+            <span className="font-medium text-accent-4">{category.label}</span>
+            <ListboxItemIndicator className="text-accent-3" />
           </ListboxItem>
         ))}
       </ListboxGroup>

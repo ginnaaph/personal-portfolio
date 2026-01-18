@@ -44,7 +44,7 @@ function ListboxGroupLabel({
     <ListboxPrimitive.GroupLabel
       data-slot="listbox-group-label"
       className={cn(
-        "px-2 pt-1 font-medium text-muted-foreground text-sm",
+        "px-2 pt-1 uppercase text-secondary text-md",
         className,
       )}
       {...props}
@@ -60,7 +60,7 @@ function ListboxItem({
     <ListboxPrimitive.Item
       data-slot="listbox-item"
       className={cn(
-        "flex w-full cursor-default select-none items-center justify-between gap-2 rounded-md p-4 outline-hidden ring-1 ring-border focus-visible:ring-ring data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-50",
+        "flex w-full cursor-default select-none items-center justify-between gap-2 bg-secondary rounded-md p-4 outline-hidden ring-1 ring-border focus-visible:ring-ring data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-50",
         className,
       )}
       {...props}

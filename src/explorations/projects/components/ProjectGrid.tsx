@@ -20,8 +20,8 @@ export function ProjectGrid({ projects, showFilters = true }: ProjectGridProps) 
   return (
     <section aria-label="Projects" className="w-full pt-0 md:p-7 lg:p-8">
       {showFilters ? (
-        <div className="mb-5 flex items-center justify-between gap-4">
-          <h2 className="font-serif text-2xl text-main">Projects</h2>
+        <div className="mb-5 flex items-center justify-between gap-2">
+          <h1>Projects</h1>
           <div
             className="flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [-ms-overflow-style:none]"
             role="tablist"
