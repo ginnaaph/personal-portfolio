@@ -5,7 +5,7 @@ import { IconStack } from "./IconStacks"
 
 type ExplorationSideBarProps = {
     className?: string
-    variant?: "all" | "programming" | "baking" | "art"
+    variant?: "all" | "art" | "baking" | "programming"
 }
 
 export const ExplorationSideBar = ({ className, variant = "all" }: ExplorationSideBarProps) => {

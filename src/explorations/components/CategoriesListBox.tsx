@@ -16,9 +16,11 @@ type CategoryOption = {
 
 const categories: CategoryOption[] = [
   { value: "all", label: "All categories", to: "/explorations" },
-  { value: "programming", label: "Programming", to: "/explorations/programming" },
-  { value: "baking", label: "Baking", to: "/explorations/baking" },
   { value: "art", label: "Art", to: "/explorations/art" },
+  { value: "baking", label: "Baking", to: "/explorations/baking" },
+  { value: "programming", label: "Programming", to: "/explorations/programming" },
+  
+  
 ]
 
 export const CategoriesListBox = () => {

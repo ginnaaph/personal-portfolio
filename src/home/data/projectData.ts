@@ -8,6 +8,9 @@ import ferryBuilding from '../../assets/images/art/ferrybuilding.png';
 import dubaiChocolate from '../../assets/images/baking/dubaiChocolate.png';
 import mochaChocolate from '../../assets/images/baking/mochaChocolate.png';
 import paintedLadies from '../../assets/images/art/paintedLadies.png';
+import sfChinatown from '../../assets/images/art/sf-chinatown.png';
+import waterColorHouseCar from '../../assets/images/art/watercolor-house-car.png';
+import waterColorBurger from '../../assets/images/art/watercolor-burger.png';
 
 export const projects: ProjectItem[] = [
   {
@@ -58,7 +61,7 @@ export const projects: ProjectItem[] = [
     image: ferryBuilding,
     previewDescription: 'loose watercolor ink drawing of the San Francisco Ferry Building.',
     slug: 'ferry-building',
-    date: '2024-08-18'
+    date: '2025-08-18'
   },
   {
     id: 'p-006',
@@ -67,7 +70,7 @@ export const projects: ProjectItem[] = [
     image: mochaChocolate,
     previewDescription: 'Mocha chocolate cake with rich coffee and chocolate flavors.',
     slug: 'mocha-chocolate-cake',
-    date: '2024-06-30'
+    date: '2025-06-30'
   },
   {
     id: 'p-007',
@@ -77,7 +80,7 @@ export const projects: ProjectItem[] = [
     previewDescription: 'dubai inspired chocolate cake ',
     slug: 'dubai-chocolate-cake',
     projectUrl: '/projects/p-007',
-    date: '2024-07-22'
+    date: '2025-07-22'
   },
   {
     id: 'p-008',
@@ -86,7 +89,7 @@ export const projects: ProjectItem[] = [
     image: mangoMousse,
     previewDescription: 'Mango mousse cake with a light and creamy texture.',
     slug: 'mango-mousse-cake',
-    date: '2024-05-12'
+    date: '2025-05-12'
   },
   {
     id: 'p-009',
@@ -95,6 +98,33 @@ export const projects: ProjectItem[] = [
     image: paintedLadies,
     previewDescription: 'watercolor painting of the iconic san francisco painted ladies houses.',
     slug: 'sf-painted-ladies',
-    date: '2024-04-08'
+    date: '2025-03-18'
+  }
+  ,  {
+    id: 'p-010',
+    title: 'sf chinatown street scene',
+    category: 'art',
+    image: sfChinatown,
+    previewDescription: 'loose watercolor and ink.',
+    slug: 'sf-chinatown-street-scene',
+    date: '2025-04-06'
+  }
+  ,  {
+    id: 'p-011',
+    title: 'house and car watercolor',
+    category: 'art',
+    image: waterColorHouseCar,
+    previewDescription: 'watercolor painting of a house and car.',
+    slug: 'house-and-car-watercolor',
+    date: '2025-09-29'
+  }
+  ,  {
+    id: 'p-012',
+    title: 'watercolor burger illustration',
+    category: 'art',
+    image: waterColorBurger,
+    previewDescription: 'watercolor painting of a burger.',
+    slug: 'watercolor-burger-illustration',
+    date: '2025-09-17'
   }
 ];

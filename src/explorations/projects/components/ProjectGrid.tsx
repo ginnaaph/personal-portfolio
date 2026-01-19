@@ -2,7 +2,7 @@ import { useMemo, useState } from "react"
 import type { ProjectItem, ProjectCategory } from "../types"
 import { ProjectCard } from "./ProjectCard"
 
-const categories: Array<ProjectCategory | "all"> = ["all", "programming", "baking", "art"]
+const categories: Array<ProjectCategory | "all"> = ["all", "art", "baking", "programming"]
 
 interface ProjectGridProps {
   projects: ProjectItem[]
