@@ -34,7 +34,7 @@ export function ContactSection({
           {title}
         </h2>
 
-        <p className="mt-3 text-accent-1 leading-relaxed">
+        <p className="mt-3 text-main leading-relaxed">
           {subtitle}
         </p>
 

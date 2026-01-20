@@ -8,7 +8,7 @@ export const experienceData: ExperienceItem[] = [
     startDate: "August 2023",
     endDate: "Present",
     description:
-      "In this corporate environment, I’ve been focused on streamlining workflows, documenting SOPs, and improving team efficiency, all while observing how different functions operate and where processes can be made more intuitive. Every task has been an opportunity to ask, “how can this be better?”",
+      "Stepped into a new industry with little prior exposure to corporate legal litigation, approaching the role with curiosity and an open mind. Focused on observing existing systems, streamlining workflows, and creating SOPs to improve efficiency. Gained hands-on experience in consulting operations, litigation support, and invoicing through close collaboration with cross-functional teams.",
     
   },
   {
@@ -18,7 +18,7 @@ export const experienceData: ExperienceItem[] = [
     startDate: "August 2022",
     endDate: "January 2023",
     description:
-      "Applied my operational mindset to recruiting by improving candidate sourcing, tracking hiring metrics, and developing more strategic communication. I enjoyed analyzing trends to optimize the hiring process — turning people ops into a system worth refining..",
+      "Applied my operational mindset to recruiting by improving candidate sourcing, tracking hiring metrics, and developing more strategic communication. I enjoyed analyzing trends to optimize the hiring process, turning people ops into a system worth refining.",
 
   },
   {
@@ -28,7 +28,7 @@ export const experienceData: ExperienceItem[] = [
     startDate: "March 2021",
     endDate: "May 2022",
     description:
-      "The role that sparked my love for startups and operations. I thrived on solving complex problems, collaborating across teams, and scaling systems that made rare disease research more efficient and accessible. It was here I learned the power of building thoughtful processes from the ground up",
+      "The role that sparked my love for startups and operations. I thrived on solving complex problems, collaborating across teams, and scaling systems that made rare disease research more efficient and accessible. It was here I learned the power of building thoughtful processes from the ground up.",
    
   },
   {
