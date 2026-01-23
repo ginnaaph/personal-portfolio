@@ -1,4 +1,4 @@
-import AboutMeImage from '../../assets/images/me/computer.png'
+import AboutMeImage from '../../assets/images/me/think.png'
 import Signature from '../../assets/images/me/signature.png'
 import { AlbertEinsteinQuote } from './Quotes'
 import { WaveDivider } from '@/components/ui/WaveDivider'
@@ -14,7 +14,7 @@ export const AboutMe = () => {
           <img
             src={AboutMeImage}
             alt="About me illustration"
-            className="h-40 w-40 shrink-0 sm:h-56 sm:w-56"
+            className="h-50 w-50 shrink-0 sm:h-56 sm:w-56"
           />
 
           {/* content */}

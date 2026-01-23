@@ -35,7 +35,14 @@ export function ContactForm({ submitLabel = "Send Message" }: ContactFormProps) 
 
     try {
       setStatus("submitting")
-      await new Promise((r) => setTimeout(r, 600))
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+      if (!response.ok) {
+        throw new Error("Send failed")
+      }
       setStatus("success")
       setData({ name: "", email: "", message: "" })
     } catch {

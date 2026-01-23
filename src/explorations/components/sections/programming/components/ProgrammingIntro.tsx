@@ -1,9 +1,17 @@
+import ProgrammingPic from "@/assets/images/me/computer.png"
 export const ProgrammingIntro = () => {
   return (
     <header className="px-2 gap-3">
       <h2 className="text-left py-2">How Did I Get Into Programming?</h2>
-      <div className="space-y-4 text-left  text-sm py-4">
-        <p>
+      <div className="text-left text-sm py-4">
+        <div className="space-y-4">
+          <img
+            src={ProgrammingPic}
+            alt="me programming"
+            className="h-40 w-40 mx-auto mb-4 md:float-left md:mr-6 md:mb-4"
+          />
+
+          <p className="text-wrap">
           I honestly had no idea what programming really was until I worked at my first startup.
           My background was mostly in healthcare and nonprofits, so I had very little exposure to
           tech. While I was there, I started working more closely with the product and engineering
@@ -13,7 +21,7 @@ export const ProgrammingIntro = () => {
           it.
         </p>
 
-        <p>
+        <p className="text-wrap">
           After leaving that role, I didn’t have another opportunity to explore programming right
           away. Fast forward to 2024, I wasn’t feeling challenged enough at work, and during my free
           time I wanted to push myself to learn something hard. That “something” ended up being
@@ -59,6 +67,9 @@ export const ProgrammingIntro = () => {
           I love programming because it’s challenging, creative, and deeply rooted in problem
           solving and because there’s always another iteration waiting to be made.
         </p>
+        <div className="clear-both" />
+        </div>
+        
       </div>
     </header>
   )

@@ -1,5 +1,6 @@
 import { Navigation } from "../../components/ui/navigation/Navigation";
 import { AboutMeIntroduction } from "../components/AboutMeIntroduction";
+import { CoreValueCarousel } from "../coreValues/components/CoreValueCarousel";
 import AboutMeImage from '../../assets/images/me/AboutMe.png';
 import {Footer } from "../../home/components/Footer";
 
@@ -13,8 +14,9 @@ export const AboutMePg = () => {
                     <h1>About Me</h1></div>
                     <section className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-14 lg:gap-20 text-left ">
                       
-                        <div className="w-full md:flex-1 md:max-w-2xl lg:max-w-3xl">
+                        <div className="w-full md:flex-1 md:max-w-2xl lg:max-w-3xl space-y-10 justify-content-center">
                             <AboutMeIntroduction />
+                           
                         </div>
                        <div className="w-full md:w-auto md:flex-none flex justify-center md:justify-end pt-10 pr-10" >
   <div
@@ -38,8 +40,12 @@ export const AboutMePg = () => {
     />
   </div>
 </div>
+ </section>
+<section className="flex justify-content-center w-full mt-20">
+  <CoreValueCarousel />
+  </section>
 
-                    </section>
+                   
                 </div>
             </div>
             <Footer />
