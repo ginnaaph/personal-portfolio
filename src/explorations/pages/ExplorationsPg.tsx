@@ -15,11 +15,11 @@ export const ExplorationsPg = () => {
             <ExplorationHeader />
           </section>
 
-          <div className="flex flex-col gap-6 md:flex-row md:items-start">
-            <section >
+          <div className="flex flex-col gap-6 md:flex-row md:items-start ">
+            <section>
             <ExplorationSideBar
               variant="all"
-              className="w-full  bg-option-2 md:sticky md:top-24 md:max-h-[calc(100vh-6rem)] md:w-64 md:shrink-0 md:overflow-auto lg:w-72"
+              className="w-full h-full overflow-hidden bg-secondary md:sticky md:top-24 md:max-h-[calc(100vh-6rem)] md:w-64 md:shrink-0 md:overflow-auto lg:w-72"
             />
             </section>
             <section className="flex-1 rounded-2xl bg-secondary p-4 shadow-sm md:p-6">

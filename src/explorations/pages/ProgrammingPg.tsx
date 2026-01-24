@@ -33,8 +33,10 @@ export const ProgrammingPg = () => {
                 <ProgrammingIntro />
               </section>
               <section className="rounded-2xl bg-white p-4 shadow-sm md:p-6">
-               <h2 className="ml-5"> Projects</h2>
-                <div className="rounded-xl p-2">
+               <div className="px-5">
+                <h1> Projects</h1>
+               </div>
+                <div className="rounded-xl p-1">
                   <ProjectGrid projects={categoryProjects} showFilters={false} />
                 </div>
               </section>

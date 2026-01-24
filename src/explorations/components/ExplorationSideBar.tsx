@@ -2,6 +2,7 @@ import SearchBox from "@/components/ui/search-box"
 import { cn } from "@/lib/utils"
 import { CategoriesListBox } from "./CategoriesListBox"
 import { IconStack } from "./IconStacks"
+import { ArtSideBar } from "./sections/arts/components/ArtSideBar"
 
 type ExplorationSideBarProps = {
     className?: string
@@ -13,7 +14,7 @@ export const ExplorationSideBar = ({ className, variant = "all" }: ExplorationSi
 
     return (
         <aside
-            className={cn("rounded-2xl bg-option-2 p-4 shadow-sm md:p-6", className)}
+            className={cn("rounded-2xl h-auto bg-secondary p-4 shadow-sm md:p-6", className)}
             aria-label="Exploration filters"
         >
             <section id="exploration-sidebar" className="flex flex-col gap-4">
@@ -36,9 +37,9 @@ function getSidebarExtraContent(variant: ExplorationSideBarProps["variant"]) {
     switch (variant) {
         case "programming":
             return (
-                <div className="text-xs text-accent-1">
-                     <div>
-                    <div className="text-sm font-medium text-accent-1 py-4" >Tech stack</div>
+                <div className="text-accent-1 bg-accent-1">
+                     <div className="bg-white p-4 rounded-lg shadow-md mt-4">
+                    <div className="bg-accent-4 p-2  text-xl  font-serif uppercase rounded-md text-white text-center mb-5 ">Tech stack</div>
                     <IconStack />
                 </div>
                     {/* TODO: Add programming-specific sidebar content */}
@@ -53,7 +54,7 @@ function getSidebarExtraContent(variant: ExplorationSideBarProps["variant"]) {
         case "art":
             return (
                 <div className="text-xs text-neutral-500">
-                    {/* TODO: Add art-specific sidebar content */}
+                    <ArtSideBar />
                 </div>
             )
         default:

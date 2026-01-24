@@ -24,13 +24,16 @@ export const ArtPg = () => {
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
             <ExplorationSideBar
               variant="art"
-              className="w-full md:sticky md:top-24 md:max-h-[calc(100vh-6rem)] md:w-64 md:shrink-0 md:overflow-auto lg:w-72"
+              className="w-full md:sticky md:top-24 md:w-64 md:shrink-0 lg:w-72"
             />
             <div className="flex-1 space-y-6">
                             <section className="rounded-2xl bg-white p-4 shadow-sm md:p-6">
                 <ArtIntro />
                           </section>
             <section className="flex-1 rounded-2xl bg-white p-4 shadow-sm md:p-6">
+              <div className="px-5">
+                <h1> Projects</h1>
+              </div>
               <ProjectGrid projects={categoryProjects} showFilters={false} />
             </section>
           </div>

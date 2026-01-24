@@ -44,7 +44,7 @@ function ListboxGroupLabel({
     <ListboxPrimitive.GroupLabel
       data-slot="listbox-group-label"
       className={cn(
-        "px-2 pt-1 uppercase text-secondary text-md",
+        "px-2 pt-1 uppercase text-accent-4 text-md",
         className,
       )}
       {...props}

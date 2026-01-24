@@ -48,9 +48,15 @@ export const CategoriesListBox = () => {
       <ListboxGroup>
         <ListboxGroupLabel>Categories</ListboxGroupLabel>
         {categories.map((category) => (
-          <ListboxItem key={category.value} value={category.value}>
-            <span className="font-medium text-accent-4">{category.label}</span>
-            <ListboxItemIndicator className="text-accent-3" />
+          <ListboxItem
+            key={category.value}
+            value={category.value}
+            className="group  bg-accent-3 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-accent-2 hover:text-option-2 hover:ring-accent/30"
+          >
+            <span className="font-medium text-accent-4 transition-colors duration-150 group-hover:text-option-2">
+              {category.label}
+            </span>
+            <ListboxItemIndicator className="text-accent-3 transition-transform duration-200 group-hover:translate-x-1" />
           </ListboxItem>
         ))}
       </ListboxGroup>
