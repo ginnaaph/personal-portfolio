@@ -37,8 +37,8 @@ function getSidebarExtraContent(variant: ExplorationSideBarProps["variant"]) {
     switch (variant) {
         case "programming":
             return (
-                <div className="text-accent-1 bg-accent-1">
-                     <div className="bg-white p-4 rounded-lg shadow-md mt-4">
+                <div className="text-accent-1">
+                     <div className="bg-white p-4 rounded-lg shadow-sm mt-4">
                     <div className="bg-accent-4 p-2  text-xl  font-serif uppercase rounded-md text-white text-center mb-5 ">Tech stack</div>
                     <IconStack />
                 </div>

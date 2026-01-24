@@ -51,7 +51,7 @@ export const CategoriesListBox = () => {
           <ListboxItem
             key={category.value}
             value={category.value}
-            className="group  bg-accent-3 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-accent-2 hover:text-option-2 hover:ring-accent/30"
+            className="group  bg-accent-3 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-accent-1 hover:text-option-2 hover:ring-accent/30"
           >
             <span className="font-medium text-accent-4 transition-colors duration-150 group-hover:text-option-2">
               {category.label}

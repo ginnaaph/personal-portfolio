@@ -31,7 +31,7 @@ export const projects: ProjectItem[] = [
     image: wcCookies,
     previewDescription: 'go to cookie recipe with brown butter and white chocolate chips',
     slug: 'brown-butter-white-chocolate-chip-cookies',
-    date: '2024-11-20'
+    date: '2025-11-20'
     
   },
   {

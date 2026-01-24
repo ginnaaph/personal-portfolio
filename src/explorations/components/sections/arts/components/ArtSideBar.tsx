@@ -1,7 +1,7 @@
 
 export const ArtSideBar = () => {
     return (
-        <div className="bg-white/90 p-4 rounded-lg flex flex-col gap-2">
+        <div className="bg-white shadow-sm p-4 rounded-lg flex flex-col gap-2">
             <div className="bg-accent-4 p-2  text-xl  font-serif uppercase rounded-md text-white text-center ">
              What I use
             </div>
